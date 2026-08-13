@@ -1,0 +1,2226 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="day" data-lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta -->
+  <title>Karor Lal Esan City Portal — Layyah District, Punjab, Pakistan | کاروڑ لعل عیسن</title>
+  <meta name="description" content="Official digital portal for Karor Lal Esan, Layyah District, Punjab, Pakistan. Explore history, governance, heritage, emergency contacts, demographics, and the spiritual legacy of Hazrat Lal Esan shrine." />
+  <meta name="keywords" content="Karor Lal Esan, Kot Karor, Layyah district portal, Hazrat Lal Esan shrine, Karor city Punjab, NA-181, PP-279, THQ Hospital Karor, Karor history, Pir Sewag Sharif" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://karor-lal-esan.pk/" />
+  <meta name="geo.region" content="PK-PB" />
+  <meta name="geo.placename" content="Karor Lal Esan" />
+  <meta name="geo.position" content="31.2167;70.9500" />
+  <meta name="ICBM" content="31.2167, 70.9500" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://karor-lal-esan.pk/" />
+  <meta property="og:title" content="Karor Lal Esan City Portal — Punjab, Pakistan" />
+  <meta property="og:description" content="Discover Karor Lal Esan — history, governance, spiritual heritage, demographics, and emergency contacts for this historic city in Layyah District." />
+  <meta property="og:image" content="https://karor-lal-esan.pk/og-image.png" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="ur_PK" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Karor Lal Esan City Portal — Punjab, Pakistan" />
+  <meta name="twitter:description" content="Official digital portal for Karor Lal Esan, Layyah District." />
+  <meta name="twitter:image" content="https://karor-lal-esan.pk/og-image.png" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "City",
+      "name": "Karor Lal Esan",
+      "alternateName": ["کاروڑ لعل عیسن", "Kot Karor", "Karor"],
+      "description": "Karor Lal Esan is a historic city in Layyah District, Punjab, Pakistan, famous for the spiritual shrine of Hazrat Lal Esan and situated near the Indus River.",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "31.2167",
+        "longitude": "70.9500",
+        "elevation": "148"
+      },
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Layyah District",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Punjab",
+          "containedInPlace": {
+            "@type": "Country",
+            "name": "Pakistan"
+          }
+        }
+      },
+      "url": "https://karor-lal-esan.pk/"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "Hazrat Lal Esan Shrine",
+      "description": "The sacred shrine of Hazrat Lal Esan in Karor, famous for the legend of 10 million (karor) recitations of Surah Yaseen released into the Indus River.",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "31.2167",
+        "longitude": "70.9500"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Karor Lal Esan",
+        "addressRegion": "Punjab",
+        "addressCountry": "PK"
+      }
+    }
+  ]
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Three.js & GSAP via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <style>
+    /* ========== CSS VARIABLES & THEME ========== */
+    :root {
+      --ff-en: 'Plus Jakarta Sans', 'Inter', sans-serif;
+      --ff-ur: 'Noto Nastaliq Urdu', serif;
+
+      /* Day Mode */
+      --bg: #F9FAFB;
+      --bg2: #FFFFFF;
+      --bg3: #F0FDF4;
+      --text: #0F172A;
+      --text2: #374151;
+      --text3: #6B7280;
+      --accent: #059669;
+      --accent2: #10B981;
+      --accent3: #D1FAE5;
+      --border: #E5E7EB;
+      --shadow: rgba(5,150,105,0.10);
+      --card: #FFFFFF;
+      --glass: rgba(255,255,255,0.80);
+      --hero-bg: linear-gradient(135deg, #F0FDF4 0%, #ECFDF5 50%, #F9FAFB 100%);
+
+      /* Footer */
+      --footer-bg: #022C22;
+      --footer-glass: rgba(6,78,59,0.55);
+      --footer-text: #D1FAE5;
+
+      /* Misc */
+      --radius: 16px;
+      --radius-sm: 8px;
+      --radius-lg: 24px;
+      --transition: 0.38s cubic-bezier(.4,0,.2,1);
+    }
+
+    [data-theme="night"] {
+      --bg: #0F172A;
+      --bg2: #1E293B;
+      --bg3: #0D2418;
+      --text: #F1F5F9;
+      --text2: #CBD5E1;
+      --text3: #94A3B8;
+      --accent: #10B981;
+      --accent2: #34D399;
+      --accent3: #064E3B;
+      --border: #1E293B;
+      --shadow: rgba(16,185,129,0.14);
+      --card: #1E293B;
+      --glass: rgba(15,23,42,0.82);
+      --hero-bg: linear-gradient(135deg, #0F172A 0%, #0D2418 50%, #0F172A 100%);
+    }
+
+    /* ========== RESET & BASE ========== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: var(--ff-en);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+      transition: background var(--transition), color var(--transition);
+    }
+
+    [data-lang="ur"] body,
+    [data-lang="ur"] .section-text,
+    [data-lang="ur"] h1,
+    [data-lang="ur"] h2,
+    [data-lang="ur"] h3,
+    [data-lang="ur"] p,
+    [data-lang="ur"] span,
+    [data-lang="ur"] .ur { font-family: var(--ff-ur); line-height: 2; }
+
+    .en { display: block; }
+    .ur { display: none; }
+    [data-lang="ur"] .en { display: none; }
+    [data-lang="ur"] .ur { display: block; }
+    [data-lang="ur"] .ur-inline { display: inline; }
+    .ur-inline { display: none; }
+    [data-lang="ur"] .en-inline { display: none; }
+    .en-inline { display: inline; }
+
+    /* ========== LOADING SCREEN ========== */
+    #loader {
+      position: fixed; inset: 0; z-index: 9999;
+      background: #0F172A;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      transition: opacity 0.7s ease, visibility 0.7s ease;
+    }
+    #loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    #loader-canvas { width: 180px; height: 180px; }
+    .loader-text {
+      color: #10B981; font-family: var(--ff-en);
+      font-size: 1.1rem; font-weight: 600; letter-spacing: 0.2em;
+      margin-top: 1.5rem; text-transform: uppercase;
+      animation: pulse 1.6s ease-in-out infinite;
+    }
+    .loader-sub {
+      color: #6B7280; font-size: 0.78rem; margin-top: 0.4rem;
+      font-family: 'Noto Nastaliq Urdu', serif; letter-spacing: 0;
+    }
+    .loader-bar {
+      width: 160px; height: 2px; background: #1E293B;
+      margin-top: 1.2rem; border-radius: 2px; overflow: hidden;
+    }
+    .loader-bar-inner {
+      height: 100%; width: 0%; background: linear-gradient(90deg, #059669, #10B981);
+      border-radius: 2px; transition: width 0.05s linear;
+    }
+    @keyframes pulse { 0%,100%{opacity:.6} 50%{opacity:1} }
+
+    /* ========== NAVBAR ========== */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 0 2rem; height: 68px;
+      display: flex; align-items: center; justify-content: space-between;
+      background: var(--glass);
+      backdrop-filter: blur(18px) saturate(1.5);
+      -webkit-backdrop-filter: blur(18px) saturate(1.5);
+      border-bottom: 1px solid var(--border);
+      transition: background var(--transition), border-color var(--transition);
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 0.6rem;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-brand-icon {
+      width: 36px; height: 36px; border-radius: 10px;
+      background: linear-gradient(135deg, #059669, #10B981);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; color: white; font-weight: 800; flex-shrink: 0;
+    }
+    .nav-brand-text { font-size: 0.9rem; font-weight: 700; line-height: 1.2; }
+    .nav-brand-sub { font-size: 0.65rem; color: var(--text3); font-weight: 400; }
+    .nav-links { display: flex; align-items: center; gap: 0.25rem; }
+    .nav-link {
+      color: var(--text2); font-size: 0.78rem; font-weight: 500;
+      text-decoration: none; padding: 0.4rem 0.7rem; border-radius: 8px;
+      transition: all 0.2s; white-space: nowrap;
+    }
+    .nav-link:hover { color: var(--accent); background: var(--accent3); }
+    .nav-controls { display: flex; align-items: center; gap: 0.5rem; }
+    .btn-icon {
+      width: 36px; height: 36px; border: none; cursor: pointer;
+      border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem; font-weight: 600; transition: all 0.2s;
+      background: var(--card); color: var(--text2); border: 1px solid var(--border);
+    }
+    .btn-icon:hover { background: var(--accent3); color: var(--accent); border-color: var(--accent); }
+    .btn-lang { font-size: 0.72rem; font-weight: 700; width: 44px; }
+    .hamburger { display: none; flex-direction: column; gap: 4px; cursor: pointer; padding: 8px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+
+    /* ========== MOBILE NAV ========== */
+    #mobile-nav {
+      display: none; position: fixed; top: 68px; left: 0; right: 0; z-index: 999;
+      background: var(--glass); backdrop-filter: blur(18px); padding: 1rem 1.5rem 1.5rem;
+      border-bottom: 1px solid var(--border); flex-direction: column; gap: 0.25rem;
+    }
+    #mobile-nav.open { display: flex; }
+    #mobile-nav .nav-link { font-size: 0.9rem; padding: 0.7rem 1rem; }
+
+    /* ========== SECTIONS COMMON ========== */
+    section { padding: 100px 0 80px; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .section-label {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--accent);
+      background: var(--accent3); padding: 0.35rem 0.85rem;
+      border-radius: 100px; margin-bottom: 1.2rem;
+    }
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem); font-weight: 800;
+      line-height: 1.15; color: var(--text);
+      margin-bottom: 1rem;
+    }
+    .section-title span { color: var(--accent); }
+    .section-desc { font-size: 1.05rem; color: var(--text3); max-width: 600px; line-height: 1.8; }
+    .card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1.5rem;
+      box-shadow: 0 4px 24px var(--shadow);
+      transition: all var(--transition);
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px var(--shadow); }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+    .accent-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+    .divider { height: 1px; background: var(--border); margin: 0; }
+    .tag {
+      display: inline-block; font-size: 0.7rem; font-weight: 600;
+      padding: 0.2rem 0.6rem; border-radius: 6px;
+      background: var(--accent3); color: var(--accent);
+    }
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ========== SECTION 1: HERO ========== */
+    #hero {
+      min-height: 100vh; padding: 0;
+      background: var(--hero-bg);
+      position: relative; overflow: hidden;
+      display: flex; flex-direction: column;
+    }
+    #three-hero {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      pointer-events: none; z-index: 0;
+    }
+    .hero-content {
+      position: relative; z-index: 1;
+      flex: 1; display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      padding: 120px 1.5rem 80px; text-align: center;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.4rem 1rem; background: var(--glass); border: 1px solid var(--border);
+      border-radius: 100px; font-size: 0.75rem; font-weight: 600; color: var(--accent);
+      backdrop-filter: blur(8px); margin-bottom: 1.8rem;
+      animation: fadeDown 0.8s ease 0.2s both;
+    }
+    .hero-title {
+      font-size: clamp(3rem, 8vw, 6.5rem); font-weight: 900;
+      line-height: 1.05; letter-spacing: -0.03em; color: var(--text);
+      margin-bottom: 0.5rem;
+      animation: fadeUp 0.9s ease 0.3s both;
+    }
+    .hero-title-ur {
+      font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 700;
+      color: var(--accent); font-family: var(--ff-ur); direction: rtl;
+      margin-bottom: 1.2rem; display: block;
+      animation: fadeUp 0.9s ease 0.4s both;
+    }
+    .hero-subtitle {
+      font-size: clamp(1rem, 2vw, 1.25rem); color: var(--text3);
+      max-width: 640px; margin: 0 auto 2.5rem;
+      animation: fadeUp 0.9s ease 0.5s both;
+    }
+    .hero-search {
+      display: flex; align-items: center; gap: 0.5rem;
+      background: var(--card); border: 1.5px solid var(--border);
+      border-radius: 100px; padding: 0.5rem 0.5rem 0.5rem 1.4rem;
+      width: 100%; max-width: 560px; box-shadow: 0 8px 32px var(--shadow);
+      animation: fadeUp 0.9s ease 0.6s both;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .hero-search:focus-within { border-color: var(--accent); box-shadow: 0 8px 32px var(--shadow), 0 0 0 3px var(--accent3); }
+    .hero-search input {
+      flex: 1; border: none; outline: none; background: transparent;
+      font-family: var(--ff-en); font-size: 0.9rem; color: var(--text);
+    }
+    .hero-search input::placeholder { color: var(--text3); }
+    .search-btn {
+      height: 40px; padding: 0 1.2rem; background: var(--accent); color: white;
+      border: none; border-radius: 100px; font-weight: 600; font-size: 0.82rem;
+      cursor: pointer; transition: all 0.2s; white-space: nowrap;
+    }
+    .search-btn:hover { background: var(--accent2); transform: scale(1.03); }
+    #search-results {
+      position: absolute; top: calc(100% + 8px); left: 0; right: 0;
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 12px; box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+      max-height: 300px; overflow-y: auto; z-index: 10;
+    }
+    .search-result-item {
+      padding: 0.75rem 1.2rem; font-size: 0.85rem; color: var(--text2);
+      cursor: pointer; display: flex; align-items: center; gap: 0.7rem;
+      transition: background 0.15s;
+    }
+    .search-result-item:hover { background: var(--accent3); color: var(--accent); }
+    .hero-stats {
+      display: flex; gap: 2.5rem; margin-top: 3rem; flex-wrap: wrap; justify-content: center;
+      animation: fadeUp 0.9s ease 0.7s both;
+    }
+    .hero-stat { text-align: center; }
+    .hero-stat-value { font-size: 1.6rem; font-weight: 800; color: var(--accent); line-height: 1; }
+    .hero-stat-label { font-size: 0.72rem; color: var(--text3); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.25rem; }
+    .weather-chip {
+      position: absolute; top: 90px; right: 2rem;
+      background: var(--glass); border: 1px solid var(--border);
+      border-radius: 14px; padding: 0.75rem 1rem;
+      backdrop-filter: blur(12px); display: flex; flex-direction: column;
+      align-items: flex-start; gap: 0.1rem; min-width: 160px;
+      animation: fadeDown 0.9s ease 0.8s both;
+    }
+    .weather-temp { font-size: 1.6rem; font-weight: 800; color: var(--text); line-height: 1; }
+    .weather-desc { font-size: 0.75rem; color: var(--text3); }
+    .weather-loc { font-size: 0.7rem; color: var(--accent); font-weight: 600; }
+    .live-badge {
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      font-size: 0.62rem; font-weight: 700; color: #EF4444; text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .live-dot { width: 6px; height: 6px; border-radius: 50%; background: #EF4444; animation: blink 1.2s ease-in-out infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
+    @keyframes fadeDown { from{opacity:0;transform:translateY(-20px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+    .scroll-hint {
+      position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 0.4rem;
+      font-size: 0.7rem; color: var(--text3); letter-spacing: 0.1em;
+      animation: bounce 2s ease infinite;
+    }
+    .scroll-arrow { width: 24px; height: 24px; border-right: 2px solid var(--text3); border-bottom: 2px solid var(--text3); transform: rotate(45deg); }
+    @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(6px)} }
+
+    /* ========== SECTION 2: GEOGRAPHY ========== */
+    #geography { background: var(--bg); }
+    .geo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
+    .geo-canvas-wrap {
+      background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-lg);
+      overflow: hidden; aspect-ratio: 1; position: relative; box-shadow: 0 4px 24px var(--shadow);
+    }
+    #three-geo { width: 100%; height: 100%; }
+    .geo-canvas-label {
+      position: absolute; bottom: 1rem; left: 1rem;
+      background: var(--glass); backdrop-filter: blur(8px);
+      border-radius: 10px; padding: 0.5rem 0.8rem;
+      font-size: 0.75rem; font-weight: 600; color: var(--text);
+    }
+    .geo-stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .geo-stat-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1.2rem; text-align: center;
+      box-shadow: 0 2px 12px var(--shadow); transition: all var(--transition);
+    }
+    .geo-stat-card:hover { transform: translateY(-3px); border-color: var(--accent); }
+    .geo-stat-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+    .geo-stat-val { font-size: 1.4rem; font-weight: 800; color: var(--accent); line-height: 1; }
+    .geo-stat-unit { font-size: 0.65rem; color: var(--text3); font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; }
+    .geo-stat-lbl { font-size: 0.8rem; color: var(--text2); margin-top: 0.3rem; font-weight: 500; }
+    .geo-highlights { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
+    .geo-highlight {
+      display: flex; align-items: flex-start; gap: 0.75rem;
+      padding: 0.85rem 1rem; background: var(--card);
+      border: 1px solid var(--border); border-radius: var(--radius-sm);
+      font-size: 0.85rem; color: var(--text2); transition: all 0.2s;
+    }
+    .geo-highlight:hover { border-color: var(--accent); background: var(--accent3); }
+    .geo-highlight-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.1rem; }
+
+    /* ========== SECTION 3: GOVERNANCE ========== */
+    #governance { background: var(--bg2); }
+    .gov-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .gov-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 1.8rem; position: relative;
+      overflow: hidden; transition: all var(--transition);
+      box-shadow: 0 4px 20px var(--shadow);
+    }
+    .gov-card::before {
+      content:''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+    }
+    .gov-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px var(--shadow); }
+    .gov-badge {
+      display: inline-block; font-size: 0.65rem; font-weight: 700;
+      padding: 0.25rem 0.65rem; border-radius: 6px; margin-bottom: 1rem;
+      background: var(--accent3); color: var(--accent); letter-spacing: 0.05em;
+    }
+    .gov-title { font-size: 0.75rem; color: var(--text3); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.4rem; }
+    .gov-name { font-size: 1.15rem; font-weight: 800; color: var(--text); line-height: 1.2; margin-bottom: 0.6rem; }
+    .gov-meta { font-size: 0.8rem; color: var(--text3); line-height: 1.6; }
+    .gov-meta strong { color: var(--accent); font-weight: 600; }
+    .uc-grid { margin-top: 2rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; }
+    .uc-chip {
+      padding: 0.5rem 0.75rem; border-radius: 10px; text-align: center;
+      font-size: 0.75rem; font-weight: 600; border: 1px solid var(--border);
+      background: var(--card); color: var(--text2); transition: all 0.2s;
+    }
+    .uc-chip:hover { background: var(--accent3); border-color: var(--accent); color: var(--accent); }
+    .uc-chip.urban { background: var(--accent3); border-color: var(--accent); color: var(--accent); }
+
+    /* ========== SECTION 4: HISTORY / TIMELINE ========== */
+    #history { background: var(--bg); position: relative; overflow: hidden; }
+    .timeline-wrap { position: relative; padding-left: 2rem; }
+    .timeline-line {
+      position: absolute; left: 10px; top: 0; bottom: 0; width: 2px;
+      background: linear-gradient(180deg, var(--accent), transparent);
+    }
+    .timeline-item {
+      position: relative; margin-bottom: 2.5rem; padding-left: 1.5rem;
+      opacity: 0; transform: translateX(-20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .timeline-item.visible { opacity: 1; transform: translateX(0); }
+    .timeline-dot {
+      position: absolute; left: -1.9rem; top: 0.4rem;
+      width: 14px; height: 14px; border-radius: 50%;
+      background: var(--accent); border: 2px solid var(--bg);
+      box-shadow: 0 0 0 3px var(--accent3);
+    }
+    .timeline-year {
+      font-size: 0.7rem; font-weight: 700; color: var(--accent);
+      text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.3rem;
+    }
+    .timeline-event { font-size: 1.05rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem; }
+    .timeline-desc { font-size: 0.88rem; color: var(--text3); line-height: 1.75; }
+    .shrine-card {
+      background: linear-gradient(135deg, var(--accent3) 0%, var(--card) 100%);
+      border: 1px solid var(--accent); border-radius: var(--radius-lg);
+      padding: 2.5rem; text-align: center; margin-top: 2rem;
+      box-shadow: 0 8px 32px var(--shadow);
+    }
+    .shrine-icon { font-size: 3.5rem; margin-bottom: 1rem; }
+    .shrine-title { font-size: 1.5rem; font-weight: 800; color: var(--text); margin-bottom: 0.75rem; }
+    .shrine-desc { font-size: 0.95rem; color: var(--text3); line-height: 1.8; max-width: 600px; margin: 0 auto; }
+    #three-timeline {
+      position: absolute; right: 0; top: 50%; transform: translateY(-50%);
+      width: 280px; height: 280px; pointer-events: none; opacity: 0.6;
+    }
+    .history-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+
+    /* ========== SECTION 5: GALLERY ========== */
+    #gallery { background: var(--bg2); }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem; margin-top: 2.5rem;
+    }
+    .gallery-item {
+      position: relative; border-radius: var(--radius); overflow: hidden;
+      aspect-ratio: 4/3; cursor: pointer;
+      background: var(--card); border: 1px solid var(--border);
+      box-shadow: 0 4px 16px var(--shadow);
+      transition: all var(--transition);
+    }
+    .gallery-item:hover { transform: scale(1.02); box-shadow: 0 8px 32px var(--shadow); }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+    .gallery-img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.5s ease; display: block;
+    }
+    .gallery-item:hover .gallery-img { transform: scale(1.06); }
+    .gallery-overlay {
+      position: absolute; inset: 0; background: rgba(5,150,105,0.75);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      opacity: 0; transition: opacity 0.3s; gap: 0.5rem;
+      padding: 1rem;
+    }
+    .gallery-overlay-icon { font-size: 2rem; color: white; }
+    .gallery-overlay-title { font-size: 0.9rem; font-weight: 700; color: white; text-align: center; }
+    .gallery-overlay-sub { font-size: 0.75rem; color: rgba(255,255,255,0.8); text-align: center; }
+    .gallery-placeholder {
+      width: 100%; height: 100%; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; background: var(--bg3);
+      color: var(--text3); font-size: 0.85rem; gap: 0.5rem; padding: 1rem;
+      text-align: center;
+    }
+    .gallery-placeholder-icon { font-size: 2.5rem; }
+
+    /* Lightbox */
+    #lightbox {
+      display: none; position: fixed; inset: 0; z-index: 2000;
+      background: rgba(0,0,0,0.92); backdrop-filter: blur(8px);
+      align-items: center; justify-content: center;
+    }
+    #lightbox.open { display: flex; animation: lbFade 0.3s ease; }
+    @keyframes lbFade { from{opacity:0} to{opacity:1} }
+    .lb-inner {
+      position: relative; max-width: 90vw; max-height: 90vh;
+      display: flex; flex-direction: column; align-items: center; gap: 1rem;
+    }
+    .lb-img-wrap {
+      position: relative; border-radius: 12px; overflow: hidden;
+      max-width: 80vw; max-height: 70vh;
+      animation: lbScale 0.35s cubic-bezier(.4,0,.2,1);
+    }
+    @keyframes lbScale { from{opacity:0;transform:scale(0.92)} to{opacity:1;transform:scale(1)} }
+    #lb-img { max-width: 80vw; max-height: 70vh; object-fit: contain; border-radius: 12px; display: block; }
+    .lb-caption { color: white; text-align: center; }
+    .lb-caption-en { font-size: 1rem; font-weight: 600; }
+    .lb-caption-ur { font-size: 0.9rem; font-family: var(--ff-ur); color: rgba(255,255,255,0.7); margin-top: 0.2rem; direction: rtl; }
+    .lb-close {
+      position: fixed; top: 1.5rem; right: 1.5rem;
+      width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.12);
+      border: none; color: white; font-size: 1.3rem; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; transition: background 0.2s;
+    }
+    .lb-close:hover { background: rgba(255,255,255,0.25); }
+    .lb-nav {
+      position: fixed; top: 50%; transform: translateY(-50%);
+      width: 48px; height: 48px; border-radius: 50%;
+      background: rgba(255,255,255,0.12); border: none; color: white;
+      font-size: 1.2rem; cursor: pointer; display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s;
+    }
+    .lb-nav:hover { background: rgba(16,185,129,0.5); }
+    #lb-prev { left: 1.5rem; }
+    #lb-next { right: 1.5rem; }
+    .lb-counter { color: rgba(255,255,255,0.6); font-size: 0.8rem; }
+
+    /* ========== SECTION 6: DEMOGRAPHICS ========== */
+    #demographics { background: var(--bg); }
+    .demo-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start; }
+    .stat-big { font-size: 3.5rem; font-weight: 900; color: var(--accent); line-height: 1; }
+    .stat-big-sub { font-size: 0.85rem; color: var(--text3); margin-top: 0.3rem; }
+    .lang-bars { margin-top: 2rem; display: flex; flex-direction: column; gap: 1rem; }
+    .lang-bar-item { display: flex; flex-direction: column; gap: 0.4rem; }
+    .lang-bar-label { display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 600; color: var(--text2); }
+    .lang-bar-track { height: 8px; background: var(--border); border-radius: 100px; overflow: hidden; }
+    .lang-bar-fill { height: 100%; border-radius: 100px; background: linear-gradient(90deg, var(--accent), var(--accent2)); transition: width 1.2s cubic-bezier(.4,0,.2,1); width: 0; }
+    .cultural-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+    .cultural-card {
+      padding: 1.2rem; border-radius: var(--radius); border: 1px solid var(--border);
+      background: var(--card); display: flex; gap: 0.75rem; align-items: flex-start;
+      transition: all 0.2s;
+    }
+    .cultural-card:hover { border-color: var(--accent); background: var(--accent3); }
+    .cultural-icon { font-size: 1.6rem; flex-shrink: 0; }
+    .cultural-name { font-size: 0.88rem; font-weight: 700; color: var(--text); }
+    .cultural-desc { font-size: 0.75rem; color: var(--text3); margin-top: 0.2rem; }
+
+    /* ========== SECTION 7: EMERGENCY ========== */
+    #emergency { background: var(--bg2); }
+    .emergency-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 2rem; }
+    .emergency-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 1.5rem;
+      display: flex; flex-direction: column; gap: 1rem;
+      box-shadow: 0 4px 20px var(--shadow); transition: all var(--transition);
+      position: relative; overflow: hidden;
+    }
+    .emergency-card::after {
+      content:''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, transparent, var(--accent-card), transparent);
+    }
+    .emergency-card:hover { transform: translateY(-4px); box-shadow: 0 10px 36px var(--shadow); }
+    .ec-rescue { --accent-card: #EF4444; }
+    .ec-police { --accent-card: #3B82F6; }
+    .ec-patrol { --accent-card: #8B5CF6; }
+    .ec-station { --accent-card: #F59E0B; }
+    .ec-hospital { --accent-card: #10B981; }
+    .ec-control { --accent-card: #0EA5E9; }
+    .emergency-icon { font-size: 2rem; }
+    .emergency-name { font-size: 1rem; font-weight: 800; color: var(--text); }
+    .emergency-number {
+      font-size: 1.6rem; font-weight: 900; color: var(--accent);
+      letter-spacing: -0.02em; line-height: 1;
+    }
+    .emergency-desc { font-size: 0.78rem; color: var(--text3); }
+    .call-btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.55rem 1rem; border-radius: 100px;
+      background: var(--accent3); color: var(--accent);
+      text-decoration: none; font-size: 0.8rem; font-weight: 700;
+      border: 1px solid var(--accent); transition: all 0.2s; width: fit-content;
+    }
+    .call-btn:hover { background: var(--accent); color: white; }
+
+    /* ========== SECTION 8: FOOTER ========== */
+    footer {
+      background: var(--footer-bg);
+      padding: 4rem 0 2rem;
+      position: relative; overflow: hidden;
+    }
+    footer::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at top left, rgba(16,185,129,0.12) 0%, transparent 60%),
+                  radial-gradient(ellipse at bottom right, rgba(5,150,105,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .footer-inner { position: relative; z-index: 1; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2.5rem; margin-bottom: 3rem; }
+    .footer-brand-text {
+      font-size: 1.25rem; font-weight: 800; color: #ECFDF5; margin-bottom: 0.75rem;
+    }
+    .footer-brand-sub { font-size: 0.82rem; color: #6EE7B7; line-height: 1.7; }
+    .footer-col-title {
+      font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em;
+      color: #6EE7B7; margin-bottom: 1.2rem;
+    }
+    .footer-links { display: flex; flex-direction: column; gap: 0.5rem; }
+    .footer-link {
+      color: #A7F3D0; font-size: 0.85rem; text-decoration: none; transition: color 0.2s;
+    }
+    .footer-link:hover { color: #ECFDF5; }
+    .footer-glass {
+      background: var(--footer-glass); border: 1px solid rgba(16,185,129,0.18);
+      border-radius: var(--radius-lg); padding: 1.5rem;
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    }
+    .footer-weather {
+      display: flex; flex-direction: column; gap: 0.5rem;
+    }
+    .fw-temp { font-size: 2rem; font-weight: 800; color: #ECFDF5; }
+    .fw-label { font-size: 0.72rem; color: #6EE7B7; text-transform: uppercase; letter-spacing: 0.1em; }
+    .fw-detail { font-size: 0.8rem; color: #A7F3D0; }
+    .footer-subscribe { display: flex; flex-direction: column; gap: 0.75rem; }
+    .footer-subscribe input {
+      background: rgba(255,255,255,0.07); border: 1px solid rgba(16,185,129,0.25);
+      border-radius: 10px; padding: 0.65rem 1rem; color: #ECFDF5; font-size: 0.85rem;
+      font-family: var(--ff-en); outline: none; transition: border-color 0.2s;
+    }
+    .footer-subscribe input::placeholder { color: #6B7280; }
+    .footer-subscribe input:focus { border-color: #10B981; }
+    .footer-subscribe button {
+      background: linear-gradient(135deg, #059669, #10B981); color: white;
+      border: none; border-radius: 10px; padding: 0.65rem 1rem; font-weight: 600;
+      font-size: 0.85rem; cursor: pointer; transition: all 0.2s;
+    }
+    .footer-subscribe button:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(16,185,129,0.4); }
+    .footer-divider { height: 1px; background: rgba(16,185,129,0.15); margin: 2rem 0; }
+    .footer-bottom {
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-copy { font-size: 0.8rem; color: #6EE7B7; }
+    .footer-credit { font-size: 0.8rem; color: #A7F3D0; }
+    .footer-credit a { color: #34D399; font-weight: 700; text-decoration: none; transition: color 0.2s; }
+    .footer-credit a:hover { color: #6EE7B7; text-decoration: underline; }
+    .footer-clock { font-size: 0.85rem; color: #6EE7B7; font-weight: 600; letter-spacing: 0.05em; }
+    .footer-socials { display: flex; gap: 0.5rem; margin-top: 1.2rem; }
+    .social-btn {
+      width: 34px; height: 34px; border-radius: 8px; border: 1px solid rgba(16,185,129,0.2);
+      background: rgba(16,185,129,0.08); color: #6EE7B7; font-size: 0.8rem;
+      display: flex; align-items: center; justify-content: center; text-decoration: none;
+      transition: all 0.2s;
+    }
+    .social-btn:hover { background: rgba(16,185,129,0.25); color: #ECFDF5; border-color: #10B981; }
+    .notice-chip {
+      display: flex; align-items: flex-start; gap: 0.5rem;
+      padding: 0.7rem 0.85rem; background: rgba(16,185,129,0.08);
+      border: 1px solid rgba(16,185,129,0.15); border-radius: 10px;
+      margin-bottom: 0.65rem;
+    }
+    .notice-dot { width: 6px; height: 6px; border-radius: 50%; background: #10B981; margin-top: 0.4rem; flex-shrink: 0; }
+    .notice-text { font-size: 0.75rem; color: #A7F3D0; line-height: 1.5; }
+
+    /* ========== SCROLL PROGRESS ========== */
+    #scroll-progress {
+      position: fixed; top: 68px; left: 0; right: 0; height: 2px; z-index: 998;
+      background: transparent;
+    }
+    #scroll-bar {
+      height: 100%; background: linear-gradient(90deg, #059669, #10B981, #34D399);
+      width: 0%; transition: width 0.1s linear;
+    }
+
+    /* ========== BACK TO TOP ========== */
+    #back-top {
+      position: fixed; bottom: 2rem; right: 2rem; z-index: 500;
+      width: 44px; height: 44px; border-radius: 12px;
+      background: var(--accent); color: white; border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; font-size: 1rem;
+      box-shadow: 0 4px 16px rgba(5,150,105,0.4); transition: all 0.3s;
+      opacity: 0; pointer-events: none; transform: translateY(10px);
+    }
+    #back-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+    #back-top:hover { background: var(--accent2); transform: translateY(-2px); }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 1024px) {
+      .geo-grid, .history-layout, .demo-layout { grid-template-columns: 1fr; }
+      #three-geo { height: 300px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .gov-grid { grid-template-columns: 1fr; }
+      .emergency-grid { grid-template-columns: 1fr 1fr; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr 1fr; }
+      .uc-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .hero-title { font-size: clamp(2.5rem, 10vw, 4rem); }
+      .weather-chip { top: 80px; right: 1rem; }
+      #three-timeline { display: none; }
+      .cultural-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .emergency-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .geo-stats-grid { grid-template-columns: 1fr 1fr; }
+      section { padding: 70px 0 60px; }
+      .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    }
+
+    /* RTL support */
+    [dir="rtl"] .timeline-wrap { padding-left: 0; padding-right: 2rem; }
+    [dir="rtl"] .timeline-line { left: auto; right: 10px; }
+    [dir="rtl"] .timeline-item { padding-left: 0; padding-right: 1.5rem; }
+    [dir="rtl"] .timeline-dot { left: auto; right: -1.9rem; }
+    [dir="rtl"] .hero-subtitle, [dir="rtl"] .section-desc { text-align: right; }
+    [dir="rtl"] .footer-bottom { flex-direction: row-reverse; }
+    [dir="rtl"] nav { flex-direction: row-reverse; }
+  </style>
+</head>
+<body>
+
+<!-- ========== LOADER ========== -->
+<div id="loader" role="status" aria-label="Loading Karor Lal Esan Portal">
+  <canvas id="loader-canvas"></canvas>
+  <div class="loader-text">Karor Lal Esan</div>
+  <div class="loader-sub">کاروڑ لعل عیسن — لیہ، پنجاب</div>
+  <div class="loader-bar"><div class="loader-bar-inner" id="loader-bar"></div></div>
+</div>
+
+<!-- ========== SCROLL PROGRESS ========== -->
+<div id="scroll-progress" aria-hidden="true"><div id="scroll-bar"></div></div>
+
+<!-- ========== NAVBAR ========== -->
+<nav role="navigation" aria-label="Main navigation">
+  <a href="#hero" class="nav-brand" aria-label="Karor Lal Esan Home">
+    <div class="nav-brand-icon">ک</div>
+    <div>
+      <div class="nav-brand-text"><span class="en-inline">Karor Lal Esan</span><span class="ur-inline">کاروڑ لعل عیسن</span></div>
+      <div class="nav-brand-sub"><span class="en-inline">Layyah District, Punjab</span><span class="ur-inline">ضلع لیہ، پنجاب</span></div>
+    </div>
+  </a>
+
+  <div class="nav-links" role="list">
+    <a href="#geography" class="nav-link" role="listitem"><span class="en-inline">Geography</span><span class="ur-inline">جغرافیہ</span></a>
+    <a href="#governance" class="nav-link" role="listitem"><span class="en-inline">Governance</span><span class="ur-inline">حکومت</span></a>
+    <a href="#history" class="nav-link" role="listitem"><span class="en-inline">History</span><span class="ur-inline">تاریخ</span></a>
+    <a href="#gallery" class="nav-link" role="listitem"><span class="en-inline">Gallery</span><span class="ur-inline">گیلری</span></a>
+    <a href="#demographics" class="nav-link" role="listitem"><span class="en-inline">Culture</span><span class="ur-inline">ثقافت</span></a>
+    <a href="#emergency" class="nav-link" role="listitem"><span class="en-inline">Emergency</span><span class="ur-inline">ہنگامی</span></a>
+  </div>
+
+  <div class="nav-controls">
+    <button class="btn-icon btn-lang" id="lang-toggle" aria-label="Toggle Language" title="Switch Language">
+      <span class="en-inline">اُردو</span><span class="ur-inline">EN</span>
+    </button>
+    <button class="btn-icon" id="theme-toggle" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">🌙</button>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+  <a href="#geography" class="nav-link">🗺️ <span class="en-inline">Geography</span><span class="ur-inline">جغرافیہ</span></a>
+  <a href="#governance" class="nav-link">🏛️ <span class="en-inline">Governance</span><span class="ur-inline">حکومت</span></a>
+  <a href="#history" class="nav-link">📜 <span class="en-inline">History</span><span class="ur-inline">تاریخ</span></a>
+  <a href="#gallery" class="nav-link">🖼️ <span class="en-inline">Gallery</span><span class="ur-inline">گیلری</span></a>
+  <a href="#demographics" class="nav-link">👥 <span class="en-inline">Culture</span><span class="ur-inline">ثقافت</span></a>
+  <a href="#emergency" class="nav-link">🚨 <span class="en-inline">Emergency</span><span class="ur-inline">ہنگامی</span></a>
+</div>
+
+<main id="main-content">
+
+<!-- ========== SECTION 1: HERO ========== -->
+<section id="hero" aria-label="Hero - Welcome to Karor Lal Esan">
+  <canvas id="three-hero" aria-hidden="true"></canvas>
+
+  <!-- Live Weather Chip -->
+  <div class="weather-chip" aria-live="polite" aria-label="Current weather in Karor Lal Esan">
+    <div class="live-badge"><span class="live-dot"></span> LIVE</div>
+    <div class="weather-temp" id="weather-temp">42°C</div>
+    <div class="weather-desc" id="weather-desc">
+      <span class="en-inline">Hot, Sunny</span><span class="ur-inline">گرم، دھوپ</span>
+    </div>
+    <div class="weather-loc">31°13'N 70°57'E</div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span>🌿</span>
+      <span class="en-inline">Official Digital Portal • Punjab, Pakistan</span>
+      <span class="ur-inline">سرکاری ڈیجیٹل پورٹل • پنجاب، پاکستان</span>
+    </div>
+
+    <h1 class="hero-title">Karor<br><span style="color:var(--accent)">Lal Esan</span></h1>
+    <span class="hero-title-ur">کاروڑ لعل عیسن</span>
+
+    <p class="hero-subtitle">
+      <span class="en-inline">A historic city on the banks of the Indus — home to the sacred shrine of Hazrat Lal Esan, ancient Thal Desert landscapes, and the living culture of Southern Punjab.</span>
+      <span class="ur-inline">دریائے سندھ کے کنارے ایک تاریخی شہر — حضرت لعل عیسن کے مقدس درگاہ، قدیم تھل ریگستان، اور جنوبی پنجاب کی زندہ ثقافت کا گھر۔</span>
+    </p>
+
+    <div style="position:relative; width:100%; max-width:560px; margin:0 auto;">
+      <div class="hero-search" role="search" aria-label="Quick search">
+        <span style="font-size:1rem; color:var(--text3); flex-shrink:0;">🔍</span>
+        <input type="search" id="search-input" placeholder="Search — Emergency, History, MNA/MPA, Shrine…" aria-label="Search portal content" autocomplete="off" />
+        <button class="search-btn" onclick="doSearch()" aria-label="Search">
+          <span class="en-inline">Search</span><span class="ur-inline">تلاش</span>
+        </button>
+      </div>
+      <div id="search-results" role="listbox" aria-label="Search results" hidden></div>
+    </div>
+
+    <div class="hero-stats" role="list" aria-label="Key statistics">
+      <div class="hero-stat" role="listitem">
+        <div class="hero-stat-value">684K</div>
+        <div class="hero-stat-label"><span class="en-inline">Population</span><span class="ur-inline">آبادی</span></div>
+      </div>
+      <div class="hero-stat" role="listitem">
+        <div class="hero-stat-value">1,823</div>
+        <div class="hero-stat-label"><span class="en-inline">km² Area</span><span class="ur-inline">کلومیٹر² رقبہ</span></div>
+      </div>
+      <div class="hero-stat" role="listitem">
+        <div class="hero-stat-value">148m</div>
+        <div class="hero-stat-label"><span class="en-inline">Elevation</span><span class="ur-inline">بلندی</span></div>
+      </div>
+      <div class="hero-stat" role="listitem">
+        <div class="hero-stat-value">14</div>
+        <div class="hero-stat-label"><span class="en-inline">Union Councils</span><span class="ur-inline">یونین کونسل</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-hint" aria-hidden="true">
+    <span style="letter-spacing:.1em; font-size:.7rem; color:var(--text3)"><span class="en-inline">SCROLL</span><span class="ur-inline">نیچے</span></span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- ========== SECTION 2: GEOGRAPHY ========== -->
+<section id="geography" aria-labelledby="geo-title">
+  <div class="container">
+    <div class="section-label">
+      🌍 <span class="en-inline">Geographical Profile</span><span class="ur-inline">جغرافیائی پروفائل</span>
+    </div>
+    <h2 class="section-title" id="geo-title">
+      <span class="en-inline">Where the <span>Indus</span> Meets<br>the Thal Desert</span>
+      <span class="ur-inline">جہاں <span>سندھ</span> تھل ریگستان سے ملتا ہے</span>
+    </h2>
+    <p class="section-desc">
+      <span class="en-inline">Karor Lal Esan sits at a dramatic geographic transition — the fertile Indus floodplain giving way to the arid Thal Desert, creating a unique ecology and centuries of cultural exchange.</span>
+      <span class="ur-inline">کاروڑ لعل عیسن ایک劇لاجواب جغرافیائی سنگم پر واقع ہے — زرخیز سندھ میدان سے خشک تھل ریگستان تک۔</span>
+    </p>
+
+    <div class="geo-grid reveal" style="margin-top:3rem;">
+      <div>
+        <div class="geo-canvas-wrap">
+          <canvas id="three-geo" aria-label="3D terrain visualization of Karor Lal Esan"></canvas>
+          <div class="geo-canvas-label">
+            <span class="en-inline">🏔️ 3D Terrain — Karor Lal Esan</span>
+            <span class="ur-inline">🏔️ تھری ڈی خطہ</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="geo-stats-grid">
+          <div class="geo-stat-card reveal">
+            <div class="geo-stat-icon">🏔️</div>
+            <div class="geo-stat-val">148<span class="geo-stat-unit">m</span></div>
+            <div class="geo-stat-lbl"><span class="en-inline">Elevation ASL</span><span class="ur-inline">سطح سمندر سے بلندی</span></div>
+          </div>
+          <div class="geo-stat-card reveal">
+            <div class="geo-stat-icon">📐</div>
+            <div class="geo-stat-val">1,823<span class="geo-stat-unit">km²</span></div>
+            <div class="geo-stat-lbl"><span class="en-inline">Tehsil Area</span><span class="ur-inline">تحصیل رقبہ</span></div>
+          </div>
+          <div class="geo-stat-card reveal">
+            <div class="geo-stat-icon">🌡️</div>
+            <div class="geo-stat-val">52°<span class="geo-stat-unit">C</span></div>
+            <div class="geo-stat-lbl"><span class="en-inline">Peak Summer</span><span class="ur-inline">زیادہ سے زیادہ درجہ حرارت</span></div>
+          </div>
+          <div class="geo-stat-card reveal">
+            <div class="geo-stat-icon">🌊</div>
+            <div class="geo-stat-val">~8<span class="geo-stat-unit">km</span></div>
+            <div class="geo-stat-lbl"><span class="en-inline">Indus Distance</span><span class="ur-inline">دریائے سندھ تا فاصلہ</span></div>
+          </div>
+        </div>
+
+        <div class="geo-highlights">
+          <div class="geo-highlight reveal">
+            <span class="geo-highlight-icon">🌵</span>
+            <div>
+              <strong style="color:var(--text); display:block; font-size:.88rem; margin-bottom:.2rem;">
+                <span class="en-inline">Thal Desert Transition Zone</span>
+                <span class="ur-inline">تھل ریگستان کا سنگم</span>
+              </strong>
+              <span style="font-size:.8rem; color:var(--text3);">
+                <span class="en-inline">Karor marks the eastern boundary of the Thal Desert, a vast sandy expanse stretching between the Indus and Jhelum rivers.</span>
+                <span class="ur-inline">کاروڑ تھل ریگستان کی مشرقی سرحد پر واقع ہے۔</span>
+              </span>
+            </div>
+          </div>
+          <div class="geo-highlight reveal">
+            <span class="geo-highlight-icon">🌊</span>
+            <div>
+              <strong style="color:var(--text); display:block; font-size:.88rem; margin-bottom:.2rem;">
+                <span class="en-inline">Indus River Proximity</span>
+                <span class="ur-inline">دریائے سندھ قربت</span>
+              </strong>
+              <span style="font-size:.8rem; color:var(--text3);">
+                <span class="en-inline">The city's spiritual and agricultural identity is inseparable from the Indus, which historically replenished the land through seasonal floods.</span>
+                <span class="ur-inline">شہر کی روحانی و زرعی شناخت دریائے سندھ سے جدا نہیں ہے۔</span>
+              </span>
+            </div>
+          </div>
+          <div class="geo-highlight reveal">
+            <span class="geo-highlight-icon">☀️</span>
+            <div>
+              <strong style="color:var(--text); display:block; font-size:.88rem; margin-bottom:.2rem;">
+                <span class="en-inline">Arid / Semi-Arid Climate (BSh/BWh)</span>
+                <span class="ur-inline">خشک / نیم خشک آب و ہوا</span>
+              </strong>
+              <span style="font-size:.8rem; color:var(--text3);">
+                <span class="en-inline">Annual rainfall averages 200–250mm, with brutal summer peaks exceeding 50°C and mild winters dropping to 4°C at night.</span>
+                <span class="ur-inline">سالانہ بارش 200-250mm، گرمیوں میں 50°C سے زیادہ۔</span>
+              </span>
+            </div>
+          </div>
+          <div class="geo-highlight reveal">
+            <span class="geo-highlight-icon">📍</span>
+            <div>
+              <strong style="color:var(--text); display:block; font-size:.88rem; margin-bottom:.2rem;">
+                <span class="en-inline">Coordinates</span>
+                <span class="ur-inline">جغرافیائی محل وقوع</span>
+              </strong>
+              <span style="font-size:.8rem; color:var(--text3);">31°13′N 70°57′E — District Layyah, Punjab, Pakistan</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SECTION 3: GOVERNANCE ========== -->
+<section id="governance" aria-labelledby="gov-title">
+  <div class="container">
+    <div class="section-label">
+      🏛️ <span class="en-inline">Political & Governance</span><span class="ur-inline">سیاسی و انتظامی ڈائریکٹری</span>
+    </div>
+    <h2 class="section-title" id="gov-title">
+      <span class="en-inline">Governance <span>Directory</span></span>
+      <span class="ur-inline">انتظامی <span>ڈائریکٹری</span></span>
+    </h2>
+    <p class="section-desc">
+      <span class="en-inline">Karor Lal Esan falls under Layyah District with representation in both national and provincial assemblies. Local governance is managed through the Municipal Committee and 14 Union Councils.</span>
+      <span class="ur-inline">کاروڑ لعل عیسن ضلع لیہ کے تحت قومی اور صوبائی اسمبلی میں نمائندگی رکھتا ہے۔</span>
+    </p>
+
+    <div class="gov-grid reveal" style="margin-top:3rem;">
+      <article class="gov-card">
+        <div class="gov-badge">🇵🇰 NA-181</div>
+        <div class="gov-title"><span class="en-inline">National Assembly Constituency</span><span class="ur-inline">قومی اسمبلی حلقہ</span></div>
+        <div class="gov-name"><span class="en-inline">Anbar Majeed Khan Niazi</span><span class="ur-inline">عنبر مجید خان نیازی</span></div>
+        <div class="gov-meta">
+          <strong><span class="en-inline">Constituency:</span><span class="ur-inline">حلقہ:</span></strong> NA-181 (Layyah-I)<br>
+          <strong><span class="en-inline">Covers:</span><span class="ur-inline">شامل:</span></strong> <span class="en-inline">Karor Lal Esan Tehsil</span><span class="ur-inline">تحصیل کاروڑ لعل عیسن</span><br>
+          <strong><span class="en-inline">Assembly:</span><span class="ur-inline">ایوان:</span></strong> <span class="en-inline">National Assembly of Pakistan</span><span class="ur-inline">قومی اسمبلی پاکستان</span>
+        </div>
+      </article>
+
+      <article class="gov-card">
+        <div class="gov-badge">🏛️ PP-279</div>
+        <div class="gov-title"><span class="en-inline">Provincial Assembly Constituency</span><span class="ur-inline">صوبائی اسمبلی حلقہ</span></div>
+        <div class="gov-name"><span class="en-inline">Muhammad Athar Maqbool</span><span class="ur-inline">محمد اطہر مقبول</span></div>
+        <div class="gov-meta">
+          <strong><span class="en-inline">Constituency:</span><span class="ur-inline">حلقہ:</span></strong> PP-279 (Layyah-I)<br>
+          <strong><span class="en-inline">Covers:</span><span class="ur-inline">شامل:</span></strong> <span class="en-inline">Karor Lal Esan & surrounding areas</span><span class="ur-inline">کاروڑ لعل عیسن و گردونواح</span><br>
+          <strong><span class="en-inline">Assembly:</span><span class="ur-inline">ایوان:</span></strong> <span class="en-inline">Punjab Provincial Assembly</span><span class="ur-inline">پنجاب صوبائی اسمبلی</span>
+        </div>
+      </article>
+
+      <article class="gov-card">
+        <div class="gov-badge">🏢 <span class="en-inline">Local Admin</span><span class="ur-inline">مقامی انتظامیہ</span></div>
+        <div class="gov-title"><span class="en-inline">Assistant Commissioner & Municipal</span><span class="ur-inline">اسسٹنٹ کمشنر و میونسپل</span></div>
+        <div class="gov-name"><span class="en-inline">AC Office Karor Lal Esan</span><span class="ur-inline">دفتر اسسٹنٹ کمشنر</span></div>
+        <div class="gov-meta">
+          <strong><span class="en-inline">AC Office:</span><span class="ur-inline">دفتر AC:</span></strong> <span class="en-inline">Tehsil Karor Lal Esan, Layyah</span><span class="ur-inline">تحصیل کاروڑ، لیہ</span><br>
+          <strong><span class="en-inline">Municipal:</span><span class="ur-inline">میونسپل:</span></strong> <span class="en-inline">Municipal Committee Karor Lal Esan</span><span class="ur-inline">میونسپل کمیٹی کاروڑ</span><br>
+          <strong><span class="en-inline">Control Room:</span><span class="ur-inline">کنٹرول روم:</span></strong> 0606-920168
+        </div>
+      </article>
+    </div>
+
+    <div style="margin-top:2.5rem;">
+      <div style="font-size:.85rem; font-weight:700; color:var(--text2); margin-bottom:1rem;">
+        🗳️ <span class="en-inline">Union Councils (14 Total — 1 Urban, 13 Rural)</span>
+        <span class="ur-inline">یونین کونسلیں (14 کل — 1 شہری، 13 دیہی)</span>
+      </div>
+      <div class="uc-grid">
+        <div class="uc-chip urban">🏙️ <span class="en-inline">UC Karor Urban</span><span class="ur-inline">UC کاروڑ شہری</span></div>
+        <div class="uc-chip"><span class="en-inline">UC Chak 162/TDA</span></div>
+        <div class="uc-chip"><span class="en-inline">UC Chak 163/TDA</span></div>
+        <div class="uc-chip"><span class="en-inline">UC Chak 174/TDA</span></div>
+        <div class="uc-chip"><span class="en-inline">UC Chak 134/TDA</span></div>
+        <div class="uc-chip"><span class="en-inline">UC Chak 146/TDA</span></div>
+        <div class="uc-chip"><span class="en-inline">UC Pir Sewag</span><span class="ur-inline">UC پیر سیواگ</span></div>
+        <div class="uc-chip"><span class="en-inline">UC Rajan Shah</span><span class="ur-inline">UC راجن شاہ</span></div>
+        <div class="uc-chip"><span class="en-inline">UC Jalwali</span></div>
+        <div class="uc-chip"><span class="en-inline">UC Bhakkar Road</span></div>
+        <div class="uc-chip"><span class="en-inline">UC Jhangh Bahawala</span></div>
+        <div class="uc-chip"><span class="en-inline">UC Kiri Lal Esan</span><span class="ur-inline">UC کیری لعل عیسن</span></div>
+        <div class="uc-chip"><span class="en-inline">UC Chak Peela</span></div>
+        <div class="uc-chip"><span class="en-inline">UC Chak 150/TDA</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SECTION 4: HISTORY ========== -->
+<section id="history" aria-labelledby="hist-title">
+  <canvas id="three-timeline" aria-hidden="true"></canvas>
+  <div class="container">
+    <div class="section-label">
+      📜 <span class="en-inline">Historical Legacy</span><span class="ur-inline">تاریخی ورثہ</span>
+    </div>
+    <h2 class="section-title" id="hist-title">
+      <span class="en-inline">Ancient Roots &amp;<br><span>Spiritual Legacy</span></span>
+      <span class="ur-inline">قدیم جڑیں اور <span>روحانی ورثہ</span></span>
+    </h2>
+
+    <div class="history-layout" style="margin-top:3rem;">
+      <div>
+        <div class="timeline-wrap">
+          <div class="timeline-line"></div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year"><span class="en-inline">Pre-Islamic Era</span><span class="ur-inline">قبل از اسلام دور</span></div>
+            <div class="timeline-event"><span class="en-inline">Ancient Settlement — Kot Karor</span><span class="ur-inline">قدیم بستی — کوٹ کاروڑ</span></div>
+            <div class="timeline-desc">
+              <span class="en-inline">The region, known as Kot Karor (Fort of Karor), was an ancient fortified settlement on the banks of the Indus River. Archaeological evidence suggests continuous habitation dating back several millennia, with connections to the broader Depalpur cultural sphere.</span>
+              <span class="ur-inline">یہ خطہ "کوٹ کاروڑ" کے نام سے دریائے سندھ کے کنارے ایک قدیم قلعہ بند بستی تھی۔ آثار قدیمہ کے شواہد ہزاروں سال کی آبادی کی تصدیق کرتے ہیں۔</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year"><span class="en-inline">~11th–12th Century CE</span><span class="ur-inline">گیارہویں-بارہویں صدی عیسوی</span></div>
+            <div class="timeline-event"><span class="en-inline">Arrival of Hazrat Lal Esan</span><span class="ur-inline">حضرت لعل عیسن کی آمد</span></div>
+            <div class="timeline-desc">
+              <span class="en-inline">A revered Sufi saint arrived at this confluence of the Indus and desert. He is said to have recited Surah Yaseen (the heart of the Quran) ten million (karor) times and cast these recitations into the sacred waters of the Indus River — giving the city its unique name: Karor (a crore / 10 million) + Lal Esan (the saint's title).</span>
+              <span class="ur-inline">ایک مقدس صوفی بزرگ دریائے سندھ اور ریگستان کے سنگم پر آئے۔ انہوں نے سورۃ یٰسین کا دس لاکھ (کاروڑ) بار ورد کیا اور یہ تلاوتیں دریائے سندھ کے مقدس پانیوں میں بہا دیں — اس طرح شہر کو منفرد نام ملا: کاروڑ + لعل عیسن۔</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year"><span class="en-inline">Medieval Period</span><span class="ur-inline">قرون وسطی</span></div>
+            <div class="timeline-event"><span class="en-inline">Growth as a Spiritual Centre</span><span class="ur-inline">روحانی مرکز کی حیثیت سے ترقی</span></div>
+            <div class="timeline-desc">
+              <span class="en-inline">The shrine of Hazrat Lal Esan attracted pilgrims from across the subcontinent. Pir Sewag Sharif and Darbar Rajan Shah emerged as additional centers of spiritual learning and Sufi tradition, cementing the region's reputation as a land of saints.</span>
+              <span class="ur-inline">حضرت لعل عیسن کے مزار نے پورے برصغیر سے عقیدت مندوں کو کھینچا۔ پیر سیواگ شریف اور دربار راجن شاہ بھی روحانی علم کے مراکز بنے۔</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year"><span class="en-inline">Mughal & Sikh Era</span><span class="ur-inline">مغل و سکھ دور</span></div>
+            <div class="timeline-event"><span class="en-inline">Strategic Indus Crossing</span><span class="ur-inline">دریائے سندھ پر اسٹریٹجک گزرگاہ</span></div>
+            <div class="timeline-desc">
+              <span class="en-inline">Karor's position at the Indus gave it strategic importance as a crossing point during Mughal administration and later under Sikh rule, functioning as a transit hub connecting DG Khan with northern Punjab.</span>
+              <span class="ur-inline">مغل اور سکھ ادوار میں کاروڑ کا سندھ پر محل وقوع اسے اہم اسٹریٹجک گزرگاہ بناتا تھا۔</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year"><span class="en-inline">British Colonial Era</span><span class="ur-inline">برطانوی نوآبادیاتی دور</span></div>
+            <div class="timeline-event"><span class="en-inline">Thal Development & Canal Projects</span><span class="ur-inline">تھل کی ترقی و نہری منصوبے</span></div>
+            <div class="timeline-desc">
+              <span class="en-inline">Under British rule, the Thal Development Authority (TDA) initiated large-scale irrigation projects, transforming parts of the barren Thal Desert into cultivable land. Karor became an administrative center with the establishment of tehsil offices.</span>
+              <span class="ur-inline">تھل ڈویلپمنٹ اتھارٹی نے سندھ کے بنجر میدانوں کو قابل کاشت بنایا۔ کاروڑ تحصیل کے دفاتر کے ساتھ انتظامی مرکز بنا۔</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year"><span class="en-inline">1947 — Independence</span><span class="ur-inline">1947 — آزادی</span></div>
+            <div class="timeline-event"><span class="en-inline">Part of Pakistan — Layyah District</span><span class="ur-inline">پاکستان کا حصہ — ضلع لیہ</span></div>
+            <div class="timeline-desc">
+              <span class="en-inline">With Pakistan's independence, Karor Lal Esan became part of Layyah District, Punjab. Large-scale migration and resettlement shaped its modern demographics, with Saraiki and Punjabi communities forming the cultural backbone.</span>
+              <span class="ur-inline">آزادی کے ساتھ کاروڑ لعل عیسن ضلع لیہ، پنجاب کا حصہ بنا۔ سرائیکی اور پنجابی برادریاں اس کی ثقافتی ریڑھ کی ہڈی بنیں۔</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="shrine-card">
+          <div class="shrine-icon">🕌</div>
+          <div class="shrine-title">
+            <span class="en-inline">Hazrat Lal Esan — The Saint of the Indus</span>
+            <span class="ur-inline">حضرت لعل عیسن — دریائے سندھ کے ولی</span>
+          </div>
+          <div class="shrine-desc">
+            <span class="en-inline">The name "Karor Lal Esan" is a testament to faith. The revered saint performed ten million (یک کاروڑ) recitations of Surah Yaseen and offered them to the Indus River — an act of profound devotion that blessed the land. His shrine today draws hundreds of thousands of devotees annually during the annual Urs celebration.</span>
+            <span class="ur-inline">"کاروڑ لعل عیسن" نام ایمان کا ثبوت ہے۔ مقدس بزرگ نے دس لاکھ بار سورۃ یٰسین کی تلاوت کی اور انہیں دریائے سندھ کو ہدیہ کیا — ایمان کا یہ عمل سرزمین کو برکت عطا کر گیا۔ آج سالانہ عرس میں لاکھوں عقیدت مند حاضری دیتے ہیں۔</span>
+          </div>
+          <div style="margin-top:1.5rem; display:flex; flex-direction:column; gap:.75rem;">
+            <div style="display:flex; align-items:center; gap:.75rem; padding:.75rem 1rem; background:var(--bg2); border-radius:10px; font-size:.82rem; color:var(--text2);">
+              <span style="font-size:1.1rem;">🌙</span>
+              <div>
+                <strong style="color:var(--text); display:block;"><span class="en-inline">Pir Sewag Sharif</span><span class="ur-inline">پیر سیواگ شریف</span></strong>
+                <span class="en-inline">Active Sufi spiritual centre with regular gatherings</span>
+                <span class="ur-inline">فعال صوفی روحانی مرکز</span>
+              </div>
+            </div>
+            <div style="display:flex; align-items:center; gap:.75rem; padding:.75rem 1rem; background:var(--bg2); border-radius:10px; font-size:.82rem; color:var(--text2);">
+              <span style="font-size:1.1rem;">⭐</span>
+              <div>
+                <strong style="color:var(--text); display:block;"><span class="en-inline">Darbar Rajan Shah</span><span class="ur-inline">دربار راجن شاہ</span></strong>
+                <span class="en-inline">Historic shrine and centre of Sufi poetry & qawwali</span>
+                <span class="ur-inline">تاریخی مزار اور صوفی شاعری کا مرکز</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SECTION 5: GALLERY ========== -->
+<section id="gallery" aria-labelledby="gallery-title">
+  <div class="container">
+    <div class="section-label">
+      🖼️ <span class="en-inline">Media Gallery</span><span class="ur-inline">میڈیا گیلری</span>
+    </div>
+    <h2 class="section-title" id="gallery-title">
+      <span class="en-inline">Karor Lal Esan Through<br><span>the Lens</span></span>
+      <span class="ur-inline">کاروڑ لعل عیسن <span>نظر سے</span></span>
+    </h2>
+    <p class="section-desc">
+      <span class="en-inline">Click any image to open full-screen. Use arrow keys or navigation buttons to explore.</span>
+      <span class="ur-inline">کوئی بھی تصویر کلک کریں۔ تیر والی کلیدیں یا بٹن استعمال کریں۔</span>
+    </p>
+
+    <div class="gallery-grid reveal" id="gallery-grid" role="list" aria-label="Gallery of Karor Lal Esan images">
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" tabindex="-1">
+  <button class="lb-close" id="lb-close" aria-label="Close lightbox">✕</button>
+  <button class="lb-nav" id="lb-prev" aria-label="Previous image">‹</button>
+  <button class="lb-nav" id="lb-next" aria-label="Next image">›</button>
+  <div class="lb-inner">
+    <div class="lb-img-wrap">
+      <img id="lb-img" src="" alt="" />
+    </div>
+    <div class="lb-caption">
+      <div class="lb-caption-en" id="lb-cap-en"></div>
+      <div class="lb-caption-ur" id="lb-cap-ur"></div>
+      <div class="lb-counter" id="lb-counter"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== SECTION 6: DEMOGRAPHICS ========== -->
+<section id="demographics" aria-labelledby="demo-title">
+  <div class="container">
+    <div class="section-label">
+      👥 <span class="en-inline">Demographics & Culture</span><span class="ur-inline">آبادی اور ثقافت</span>
+    </div>
+    <h2 class="section-title" id="demo-title">
+      <span class="en-inline">People, Language<br>&amp; <span>Cultural Heritage</span></span>
+      <span class="ur-inline">لوگ، زبان اور <span>ثقافتی ورثہ</span></span>
+    </h2>
+
+    <div class="demo-layout reveal" style="margin-top:3rem;">
+      <div>
+        <div style="margin-bottom:2rem;">
+          <div class="stat-big">684,729</div>
+          <div class="stat-big-sub">
+            <span class="en-inline">Total Population — Census 2023 (Karor Tehsil)</span>
+            <span class="ur-inline">کل آبادی — مردم شماری 2023 (تحصیل کاروڑ)</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom:1.5rem;">
+          <div style="font-size:.9rem; font-weight:700; color:var(--text); margin-bottom:1rem;">
+            🗣️ <span class="en-inline">Language Distribution</span><span class="ur-inline">زبان کی تقسیم</span>
+          </div>
+          <div class="lang-bars" id="lang-bars">
+            <div class="lang-bar-item">
+              <div class="lang-bar-label"><span>Saraiki <span class="en-inline">(سرائیکی)</span></span><span>58.6%</span></div>
+              <div class="lang-bar-track"><div class="lang-bar-fill" data-width="58.6" style="background:linear-gradient(90deg,#059669,#10B981)"></div></div>
+            </div>
+            <div class="lang-bar-item">
+              <div class="lang-bar-label"><span>Punjabi <span class="en-inline">(پنجابی)</span></span><span>36.7%</span></div>
+              <div class="lang-bar-track"><div class="lang-bar-fill" data-width="36.7" style="background:linear-gradient(90deg,#0EA5E9,#38BDF8)"></div></div>
+            </div>
+            <div class="lang-bar-item">
+              <div class="lang-bar-label"><span>Pashto <span class="en-inline">(پشتو)</span></span><span>2.8%</span></div>
+              <div class="lang-bar-track"><div class="lang-bar-fill" data-width="2.8" style="background:linear-gradient(90deg,#8B5CF6,#A78BFA)"></div></div>
+            </div>
+            <div class="lang-bar-item">
+              <div class="lang-bar-label"><span>Urdu <span class="en-inline">(اردو)</span></span><span>1.4%</span></div>
+              <div class="lang-bar-track"><div class="lang-bar-fill" data-width="1.4" style="background:linear-gradient(90deg,#F59E0B,#FCD34D)"></div></div>
+            </div>
+            <div class="lang-bar-item">
+              <div class="lang-bar-label"><span><span class="en-inline">Others</span><span class="ur-inline">دیگر</span></span><span>0.5%</span></div>
+              <div class="lang-bar-track"><div class="lang-bar-fill" data-width="0.5" style="background:linear-gradient(90deg,#EC4899,#F472B6)"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:1rem; margin-top:1.5rem;">
+          <div style="text-align:center; padding:1rem; background:var(--card); border:1px solid var(--border); border-radius:12px;">
+            <div style="font-size:1.3rem; font-weight:800; color:var(--accent);">65%</div>
+            <div style="font-size:.72rem; color:var(--text3); margin-top:.2rem;"><span class="en-inline">Rural</span><span class="ur-inline">دیہی</span></div>
+          </div>
+          <div style="text-align:center; padding:1rem; background:var(--card); border:1px solid var(--border); border-radius:12px;">
+            <div style="font-size:1.3rem; font-weight:800; color:var(--accent);">35%</div>
+            <div style="font-size:.72rem; color:var(--text3); margin-top:.2rem;"><span class="en-inline">Urban</span><span class="ur-inline">شہری</span></div>
+          </div>
+          <div style="text-align:center; padding:1rem; background:var(--card); border:1px solid var(--border); border-radius:12px;">
+            <div style="font-size:1.3rem; font-weight:800; color:var(--accent);">97%</div>
+            <div style="font-size:.72rem; color:var(--text3); margin-top:.2rem;"><span class="en-inline">Muslim</span><span class="ur-inline">مسلمان</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-size:.9rem; font-weight:700; color:var(--text); margin-bottom:1.2rem;">
+          🎉 <span class="en-inline">Annual Cultural Events</span><span class="ur-inline">سالانہ ثقافتی تقریبات</span>
+        </div>
+        <div class="cultural-grid">
+          <div class="cultural-card">
+            <div class="cultural-icon">🌕</div>
+            <div>
+              <div class="cultural-name">Mela Chodhwein</div>
+              <div class="cultural-desc"><span class="en-inline">Full moon festival celebrated on the banks of the Indus with music, food & local craft stalls</span><span class="ur-inline">دریائے سندھ کے کنارے چاند رات کا میلہ</span></div>
+            </div>
+          </div>
+          <div class="cultural-card">
+            <div class="cultural-icon">🐎</div>
+            <div>
+              <div class="cultural-name"><span class="en-inline">Tent Pegging</span><span class="ur-inline">خیمہ کیلی</span></div>
+              <div class="cultural-desc"><span class="en-inline">Traditional equestrian sport showcasing riders' skill with lance and galloping horse</span><span class="ur-inline">روایتی گھڑسواری کھیل</span></div>
+            </div>
+          </div>
+          <div class="cultural-card">
+            <div class="cultural-icon">🤼</div>
+            <div>
+              <div class="cultural-name"><span class="en-inline">Kushti (Wrestling)</span><span class="ur-inline">کشتی</span></div>
+              <div class="cultural-desc"><span class="en-inline">Traditional South Asian wrestling contests held during fairs & Urs celebrations</span><span class="ur-inline">روایتی پہلوانی مقابلے</span></div>
+            </div>
+          </div>
+          <div class="cultural-card">
+            <div class="cultural-icon">🏃</div>
+            <div>
+              <div class="cultural-name"><span class="en-inline">Kabaddi</span><span class="ur-inline">کبڈی</span></div>
+              <div class="cultural-desc"><span class="en-inline">High-energy contact sport deeply rooted in Saraiki village culture and inter-village rivalries</span><span class="ur-inline">سرائیکی گاؤں کا روایتی کھیل</span></div>
+            </div>
+          </div>
+          <div class="cultural-card">
+            <div class="cultural-icon">🕌</div>
+            <div>
+              <div class="cultural-name"><span class="en-inline">Annual Urs — Hazrat Lal Esan</span><span class="ur-inline">سالانہ عرس — حضرت لعل عیسن</span></div>
+              <div class="cultural-desc"><span class="en-inline">The largest spiritual gathering, drawing hundreds of thousands of devotees from across Pakistan</span><span class="ur-inline">سب سے بڑا روحانی اجتماع</span></div>
+            </div>
+          </div>
+          <div class="cultural-card">
+            <div class="cultural-icon">🎶</div>
+            <div>
+              <div class="cultural-name"><span class="en-inline">Saraiki Music & Folk Arts</span><span class="ur-inline">سرائیکی موسیقی و لوک فنون</span></div>
+              <div class="cultural-desc"><span class="en-inline">Rich tradition of Dhol, Alghoza, Tumbi and Saraiki folk poetry (Kafis & Dohas)</span><span class="ur-inline">ڈھول، الغوزہ، تمبی اور سرائیکی شاعری</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SECTION 7: EMERGENCY ========== -->
+<section id="emergency" aria-labelledby="emg-title">
+  <div class="container">
+    <div class="section-label" style="background:#FEF2F2; color:#EF4444;">
+      🚨 <span class="en-inline">Emergency & Municipal Directory</span><span class="ur-inline">ہنگامی و میونسپل ڈائریکٹری</span>
+    </div>
+    <h2 class="section-title" id="emg-title">
+      <span class="en-inline">Emergency <span>Helplines</span></span>
+      <span class="ur-inline">ہنگامی <span>ہیلپ لائنز</span></span>
+    </h2>
+    <p class="section-desc">
+      <span class="en-inline">One-touch dialable emergency contacts for Karor Lal Esan and Layyah District. Save these numbers today.</span>
+      <span class="ur-inline">کاروڑ لعل عیسن کے ہنگامی نمبر۔ آج ہی محفوظ کریں۔</span>
+    </p>
+
+    <div class="emergency-grid reveal" style="margin-top:2rem;">
+      <article class="emergency-card ec-rescue">
+        <div class="emergency-icon">🚑</div>
+        <div>
+          <div class="emergency-name"><span class="en-inline">Rescue — Emergency Medical & Fire</span><span class="ur-inline">ریسکیو — طبی و آتش بجھانے</span></div>
+          <div class="emergency-number">1122</div>
+          <div class="emergency-desc"><span class="en-inline">24/7 Emergency rescue, ambulance & fire brigade services across Punjab</span><span class="ur-inline">24/7 ہنگامی امداد، ایمبولینس اور فائر بریگیڈ</span></div>
+        </div>
+        <a href="tel:1122" class="call-btn" aria-label="Call Rescue 1122">📞 <span class="en-inline">Call 1122</span><span class="ur-inline">کال 1122</span></a>
+      </article>
+
+      <article class="emergency-card ec-police">
+        <div class="emergency-icon">🚔</div>
+        <div>
+          <div class="emergency-name"><span class="en-inline">Police Emergency</span><span class="ur-inline">پولیس ہنگامی</span></div>
+          <div class="emergency-number">15</div>
+          <div class="emergency-desc"><span class="en-inline">Police emergency hotline for crime, security incidents and urgent law enforcement</span><span class="ur-inline">جرائم اور سیکورٹی واقعات کے لیے ہنگامی پولیس ہاٹ لائن</span></div>
+        </div>
+        <a href="tel:15" class="call-btn" aria-label="Call Police Emergency 15">📞 <span class="en-inline">Call 15</span><span class="ur-inline">کال 15</span></a>
+      </article>
+
+      <article class="emergency-card ec-patrol">
+        <div class="emergency-icon">🛡️</div>
+        <div>
+          <div class="emergency-name"><span class="en-inline">Patrolling Police</span><span class="ur-inline">پٹرولنگ پولیس</span></div>
+          <div class="emergency-number">1124</div>
+          <div class="emergency-desc"><span class="en-inline">Report suspicious activity, crimes in progress or request police patrol assistance</span><span class="ur-inline">مشکوک سرگرمیاں رپورٹ کریں یا پٹرولنگ کی درخواست کریں</span></div>
+        </div>
+        <a href="tel:1124" class="call-btn" aria-label="Call Patrolling Police 1124">📞 <span class="en-inline">Call 1124</span><span class="ur-inline">کال 1124</span></a>
+      </article>
+
+      <article class="emergency-card ec-station">
+        <div class="emergency-icon">🏠</div>
+        <div>
+          <div class="emergency-name"><span class="en-inline">Police Station — Karor Lal Esan</span><span class="ur-inline">تھانہ — کاروڑ لعل عیسن</span></div>
+          <div class="emergency-number" style="font-size:1.1rem;">0606-920165</div>
+          <div class="emergency-desc"><span class="en-inline">Direct line to Karor Lal Esan Police Station for reports, FIRs and local matters</span><span class="ur-inline">ایف آئی آر اور مقامی معاملات کے لیے براہ راست لائن</span></div>
+        </div>
+        <a href="tel:0606920165" class="call-btn" aria-label="Call Police Station Karor">📞 <span class="en-inline">Call Station</span><span class="ur-inline">تھانہ کال</span></a>
+      </article>
+
+      <article class="emergency-card ec-hospital">
+        <div class="emergency-icon">🏥</div>
+        <div>
+          <div class="emergency-name"><span class="en-inline">THQ Hospital — Karor Lal Esan</span><span class="ur-inline">ٹی ایچ کیو ہسپتال — کاروڑ</span></div>
+          <div class="emergency-number" style="font-size:1.1rem;">0606-811018</div>
+          <div class="emergency-desc"><span class="en-inline">Tehsil Headquarter Hospital providing emergency, OPD and inpatient services</span><span class="ur-inline">تحصیل ہیڈکوارٹر ہسپتال — ہنگامی، او پی ڈی اور داخلی خدمات</span></div>
+        </div>
+        <a href="tel:0606811018" class="call-btn" aria-label="Call THQ Hospital">📞 <span class="en-inline">Call Hospital</span><span class="ur-inline">ہسپتال کال</span></a>
+      </article>
+
+      <article class="emergency-card ec-control">
+        <div class="emergency-icon">🎯</div>
+        <div>
+          <div class="emergency-name"><span class="en-inline">Layyah District Control Room</span><span class="ur-inline">ضلع لیہ کنٹرول روم</span></div>
+          <div class="emergency-number" style="font-size:1.1rem;">0606-920168</div>
+          <div class="emergency-desc"><span class="en-inline">District-level coordination for major incidents, disaster management and administrative emergencies</span><span class="ur-inline">بڑے واقعات، آفات اور انتظامی ہنگامیوں کے لیے ضلعی رابطہ مرکز</span></div>
+        </div>
+        <a href="tel:0606920168" class="call-btn" aria-label="Call District Control Room">📞 <span class="en-inline">Call Control</span><span class="ur-inline">کنٹرول روم</span></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ========== SECTION 8: FOOTER ========== -->
+<footer role="contentinfo" aria-label="Site footer">
+  <div class="container footer-inner">
+    <div class="footer-grid">
+
+      <!-- Brand & About -->
+      <div>
+        <div style="display:flex; align-items:center; gap:.75rem; margin-bottom:1rem;">
+          <div style="width:40px; height:40px; border-radius:12px; background:linear-gradient(135deg,#059669,#10B981); display:flex; align-items:center; justify-content:center; font-size:1.1rem; color:white; font-weight:800; flex-shrink:0;">ک</div>
+          <div class="footer-brand-text">Karor Lal Esan</div>
+        </div>
+        <div class="footer-brand-sub">
+          <span class="en-inline">Official digital portal for Karor Lal Esan, Tehsil of Layyah District, Punjab, Pakistan. Preserving history, serving citizens, celebrating heritage.</span>
+          <span class="ur-inline">کاروڑ لعل عیسن کا سرکاری ڈیجیٹل پورٹل، ضلع لیہ، پنجاب، پاکستان۔</span>
+        </div>
+        <div class="footer-socials">
+          <a href="https://instagram.com/muhammd.shahu7" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">📸</a>
+          <a href="#" class="social-btn" aria-label="Facebook">📘</a>
+          <a href="#" class="social-btn" aria-label="Twitter/X">🐦</a>
+          <a href="#" class="social-btn" aria-label="YouTube">▶️</a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <div class="footer-col-title"><span class="en-inline">Quick Links</span><span class="ur-inline">فوری روابط</span></div>
+        <div class="footer-links">
+          <a href="#geography" class="footer-link"><span class="en-inline">📍 Geography & Climate</span><span class="ur-inline">📍 جغرافیہ و آب و ہوا</span></a>
+          <a href="#governance" class="footer-link"><span class="en-inline">🏛️ Political Representatives</span><span class="ur-inline">🏛️ سیاسی نمائندے</span></a>
+          <a href="#history" class="footer-link"><span class="en-inline">📜 City History</span><span class="ur-inline">📜 شہر کی تاریخ</span></a>
+          <a href="#gallery" class="footer-link"><span class="en-inline">🖼️ Photo Gallery</span><span class="ur-inline">🖼️ تصویری گیلری</span></a>
+          <a href="#demographics" class="footer-link"><span class="en-inline">👥 Demographics</span><span class="ur-inline">👥 آبادی</span></a>
+          <a href="#emergency" class="footer-link"><span class="en-inline">🚨 Emergency Contacts</span><span class="ur-inline">🚨 ہنگامی رابطے</span></a>
+        </div>
+      </div>
+
+      <!-- Weather Widget + Notices -->
+      <div>
+        <div class="footer-col-title"><span class="en-inline">Live Weather & Notices</span><span class="ur-inline">لائیو موسم و اعلانات</span></div>
+        <div class="footer-glass footer-weather" style="margin-bottom:1rem;">
+          <div class="fw-label">🌍 Karor Lal Esan, Punjab</div>
+          <div class="fw-temp" id="footer-temp">42°C ☀️</div>
+          <div class="fw-detail">
+            <span class="en-inline">Hot & Sunny · Humidity 28%<br>Wind: SW 12 km/h</span>
+            <span class="ur-inline">گرم اور دھوپ · نمی 28%</span>
+          </div>
+        </div>
+        <div>
+          <div class="notice-chip">
+            <div class="notice-dot"></div>
+            <div class="notice-text"><span class="en-inline">Annual Urs of Hazrat Lal Esan — dates announced locally each year</span><span class="ur-inline">سالانہ عرس حضرت لعل عیسن — تاریخ مقامی اعلان</span></div>
+          </div>
+          <div class="notice-chip">
+            <div class="notice-dot"></div>
+            <div class="notice-text"><span class="en-inline">THQ Hospital Karor — 24/7 emergency ward operational</span><span class="ur-inline">ٹی ایچ کیو ہسپتال — 24/7 ایمرجنسی وارڈ فعال</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div>
+        <div class="footer-col-title"><span class="en-inline">District Newsletter</span><span class="ur-inline">ضلعی نیوز لیٹر</span></div>
+        <div class="footer-glass">
+          <div style="font-size:.8rem; color:#A7F3D0; margin-bottom:1rem; line-height:1.6;">
+            <span class="en-inline">Stay updated on Karor Lal Esan news, events, and official announcements.</span>
+            <span class="ur-inline">کاروڑ لعل عیسن کی خبروں سے باخبر رہیں۔</span>
+          </div>
+          <div class="footer-subscribe" id="newsletter-form">
+            <input type="email" id="newsletter-email" placeholder="your@email.com" aria-label="Email for newsletter" />
+            <button onclick="subscribeNewsletter()" aria-label="Subscribe to newsletter">
+              <span class="en-inline">Subscribe →</span><span class="ur-inline">سبسکرائب کریں ←</span>
+            </button>
+          </div>
+          <div id="newsletter-msg" style="display:none; font-size:.8rem; color:#6EE7B7; margin-top:.5rem; text-align:center;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">
+        © <span id="copy-year">2025</span> Karor Lal Esan City Portal.
+        <span class="en-inline">All rights reserved.</span>
+        <span class="ur-inline">جملہ حقوق محفوظ ہیں۔</span>
+      </div>
+      <div class="footer-clock" id="footer-clock" aria-live="polite">🕐 --:--:--</div>
+      <div class="footer-credit">
+        <span class="en-inline">Built with</span><span class="ur-inline">بنایا گیا</span>
+        ❤️
+        <span class="en-inline">passion by</span><span class="ur-inline">محبت سے از</span>
+        <a href="https://instagram.com/muhammd.shahu7" target="_blank" rel="noopener noreferrer" aria-label="Muhammad Shayan on Instagram">Muhammad Shayan</a>
+        <span class="en-inline"> Bin Attaullah Sheikh</span>
+        <span class="ur-inline"> بن عطاء اللہ شیخ</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+<script>
+// =========================================================
+//  KAROR LAL ESAN PORTAL — JavaScript
+// =========================================================
+
+// ---- SEARCH DATA ----
+const searchData = [
+  { title: 'Rescue Emergency', titleUr: 'ریسکیو ہنگامی', desc: 'Call 1122', link: '#emergency', icon: '🚑' },
+  { title: 'Police Emergency', titleUr: 'پولیس ہنگامی', desc: 'Call 15', link: '#emergency', icon: '🚔' },
+  { title: 'THQ Hospital Karor', titleUr: 'ٹی ایچ کیو ہسپتال', desc: '0606-811018', link: '#emergency', icon: '🏥' },
+  { title: 'Police Station Karor', titleUr: 'تھانہ کاروڑ', desc: '0606-920165', link: '#emergency', icon: '🏠' },
+  { title: 'MNA Anbar Majeed Khan Niazi', titleUr: 'ایم این اے عنبر مجید', desc: 'NA-181 Layyah-I', link: '#governance', icon: '🇵🇰' },
+  { title: 'MPA Muhammad Athar Maqbool', titleUr: 'ایم پی اے محمد اطہر', desc: 'PP-279 Layyah-I', link: '#governance', icon: '🏛️' },
+  { title: 'Hazrat Lal Esan Shrine', titleUr: 'حضرت لعل عیسن', desc: 'History & Spiritual Legacy', link: '#history', icon: '🕌' },
+  { title: 'Karor Lal Esan History', titleUr: 'تاریخ کاروڑ', desc: 'Ancient roots & timeline', link: '#history', icon: '📜' },
+  { title: 'Geography — Elevation 148m', titleUr: 'جغرافیہ', desc: 'Indus River, Thal Desert', link: '#geography', icon: '🗺️' },
+  { title: 'Pir Sewag Sharif', titleUr: 'پیر سیواگ شریف', desc: 'Sufi Shrine', link: '#history', icon: '🌙' },
+  { title: 'Union Councils — 14 total', titleUr: 'یونین کونسلیں', desc: '1 Urban + 13 Rural', link: '#governance', icon: '🗳️' },
+  { title: 'Population 684,729', titleUr: 'آبادی', desc: 'Census 2023', link: '#demographics', icon: '👥' },
+  { title: 'Saraiki Language 58.6%', titleUr: 'سرائیکی زبان', desc: 'Most spoken language', link: '#demographics', icon: '🗣️' },
+  { title: 'Layyah District Control Room', titleUr: 'ضلع لیہ کنٹرول روم', desc: '0606-920168', link: '#emergency', icon: '🎯' },
+  { title: 'Darbar Rajan Shah', titleUr: 'دربار راجن شاہ', desc: 'Spiritual Heritage', link: '#history', icon: '⭐' },
+  { title: 'Cultural Events — Mela, Kabaddi', titleUr: 'ثقافتی تقریبات', desc: 'Kushti, Tent Pegging', link: '#demographics', icon: '🎉' },
+  { title: 'Patrolling Police 1124', titleUr: 'پٹرولنگ پولیس', desc: 'Call 1124', link: '#emergency', icon: '🛡️' },
+];
+
+// ---- GALLERY DATA ----
+const galleryImages = [
+  { src: './public/images/karor-1.png', fallback: null, en: 'Karor Lal Esan Cityscape', ur: 'کاروڑ لعل عیسن شہر کا منظر', icon: '🌆' },
+  { src: './public/images/karor-2.png', fallback: null, en: 'Hazrat Lal Esan Shrine', ur: 'حضرت لعل عیسن کا مزار', icon: '🕌' },
+  { src: './public/images/karor-3.png', fallback: null, en: 'Indus River at Karor', ur: 'کاروڑ میں دریائے سندھ', icon: '🌊' },
+  { src: './public/images/karor-4.png', fallback: null, en: 'Thal Desert Landscape', ur: 'تھل ریگستان کا منظر', icon: '🌵' },
+  { src: './public/images/karor-5.png', fallback: null, en: 'Pir Sewag Sharif', ur: 'پیر سیواگ شریف', icon: '🌙' },
+  { src: null, fallback: 'placeholder', en: 'Annual Urs Celebration', ur: 'سالانہ عرس تقریب', icon: '🎉' },
+];
+
+let currentLbIndex = 0;
+let isDay = true;
+let isEn = true;
+
+// =========================================================
+// LOADER
+// =========================================================
+(function initLoader() {
+  const loaderCanvas = document.getElementById('loader-canvas');
+  const ctx = loaderCanvas.getContext('2d');
+  loaderCanvas.width = 180;
+  loaderCanvas.height = 180;
+
+  let angle = 0;
+  let loadProgress = 0;
+  const bar = document.getElementById('loader-bar');
+
+  function drawLoader() {
+    ctx.clearRect(0, 0, 180, 180);
+    const cx = 90, cy = 90;
+
+    // Outer glow ring
+    ctx.beginPath();
+    ctx.arc(cx, cy, 68, 0, Math.PI * 2);
+    ctx.strokeStyle = 'rgba(16,185,129,0.12)';
+    ctx.lineWidth = 14;
+    ctx.stroke();
+
+    // Spinning arc
+    ctx.beginPath();
+    ctx.arc(cx, cy, 68, angle, angle + Math.PI * 1.3);
+    const grad = ctx.createLinearGradient(cx - 68, cy, cx + 68, cy);
+    grad.addColorStop(0, '#059669');
+    grad.addColorStop(1, '#34D399');
+    ctx.strokeStyle = grad;
+    ctx.lineWidth = 3;
+    ctx.lineCap = 'round';
+    ctx.stroke();
+
+    // Silhouette — minaret
+    ctx.fillStyle = '#10B981';
+    ctx.globalAlpha = 0.9 + 0.1 * Math.sin(angle * 2);
+
+    // Base
+    ctx.fillRect(cx - 8, cy + 20, 16, 28);
+    // Minaret body
+    ctx.fillRect(cx - 5, cy - 10, 10, 32);
+    // Dome
+    ctx.beginPath();
+    ctx.arc(cx, cy - 10, 7, Math.PI, 0, false);
+    ctx.fill();
+    // Spire
+    ctx.fillRect(cx - 1, cy - 22, 2, 14);
+
+    ctx.globalAlpha = 1;
+    angle += 0.035;
+  }
+
+  const animFrame = setInterval(drawLoader, 16);
+
+  const progressInterval = setInterval(() => {
+    loadProgress = Math.min(loadProgress + (Math.random() * 4 + 1), 100);
+    if (bar) bar.style.width = loadProgress + '%';
+    if (loadProgress >= 100) {
+      clearInterval(progressInterval);
+    }
+  }, 60);
+
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      clearInterval(animFrame);
+      clearInterval(progressInterval);
+      if (bar) bar.style.width = '100%';
+      setTimeout(() => {
+        const loader = document.getElementById('loader');
+        if (loader) loader.classList.add('hidden');
+      }, 400);
+    }, 1800);
+  });
+
+  // Fallback hide after 4s
+  setTimeout(() => {
+    const loader = document.getElementById('loader');
+    if (loader) loader.classList.add('hidden');
+  }, 4000);
+})();
+
+// =========================================================
+// THREE.JS — HERO CANVAS
+// =========================================================
+(function initHeroThree() {
+  const canvas = document.getElementById('three-hero');
+  if (!canvas || !window.THREE) return;
+
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setSize(canvas.offsetWidth || window.innerWidth, canvas.offsetHeight || window.innerHeight);
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(60, (canvas.offsetWidth || window.innerWidth) / (canvas.offsetHeight || window.innerHeight), 0.1, 1000);
+  camera.position.set(0, 0, 5);
+
+  // Wireframe sphere (globe)
+  const sphereGeo = new THREE.SphereGeometry(2, 32, 32);
+  const sphereMat = new THREE.MeshBasicMaterial({
+    color: 0x10B981, wireframe: true, transparent: true, opacity: 0.08
+  });
+  const sphere = new THREE.Mesh(sphereGeo, sphereMat);
+  scene.add(sphere);
+
+  // Floating particles
+  const particles = [];
+  const particleGeo = new THREE.BufferGeometry();
+  const particleCount = 180;
+  const positions = new Float32Array(particleCount * 3);
+  for (let i = 0; i < particleCount; i++) {
+    positions[i * 3] = (Math.random() - 0.5) * 14;
+    positions[i * 3 + 1] = (Math.random() - 0.5) * 10;
+    positions[i * 3 + 2] = (Math.random() - 0.5) * 8;
+  }
+  particleGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  const particleMat = new THREE.PointsMaterial({ color: 0x10B981, size: 0.04, transparent: true, opacity: 0.55 });
+  const particleMesh = new THREE.Points(particleGeo, particleMat);
+  scene.add(particleMesh);
+
+  // Floating geometric landmark
+  const icoGeo = new THREE.IcosahedronGeometry(0.7, 0);
+  const icoMat = new THREE.MeshBasicMaterial({ color: 0x059669, wireframe: true, transparent: true, opacity: 0.5 });
+  const ico = new THREE.Mesh(icoGeo, icoMat);
+  ico.position.set(3, 1, -1);
+  scene.add(ico);
+
+  const icoGeo2 = new THREE.OctahedronGeometry(0.4, 0);
+  const icoMat2 = new THREE.MeshBasicMaterial({ color: 0x34D399, wireframe: true, transparent: true, opacity: 0.4 });
+  const ico2 = new THREE.Mesh(icoGeo2, icoMat2);
+  ico2.position.set(-3.5, -1, -0.5);
+  scene.add(ico2);
+
+  let mouseX = 0, mouseY = 0;
+  document.addEventListener('mousemove', (e) => {
+    mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
+    mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+  });
+
+  let t = 0;
+  function animate() {
+    requestAnimationFrame(animate);
+    t += 0.005;
+
+    sphere.rotation.y += 0.0015;
+    sphere.rotation.x += 0.0008;
+    particleMesh.rotation.y += 0.0006;
+    ico.rotation.x += 0.008;
+    ico.rotation.y += 0.012;
+    ico2.rotation.x -= 0.007;
+    ico2.rotation.z += 0.009;
+
+    // Mouse parallax
+    camera.position.x += (mouseX * 0.3 - camera.position.x) * 0.04;
+    camera.position.y += (-mouseY * 0.2 - camera.position.y) * 0.04;
+    camera.lookAt(0, 0, 0);
+
+    renderer.render(scene, camera);
+  }
+  animate();
+
+  window.addEventListener('resize', () => {
+    const w = canvas.offsetWidth || window.innerWidth;
+    const h = canvas.offsetHeight || window.innerHeight;
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+    renderer.setSize(w, h);
+  });
+})();
+
+// =========================================================
+// THREE.JS — GEO TERRAIN CANVAS
+// =========================================================
+(function initGeoThree() {
+  const canvas = document.getElementById('three-geo');
+  if (!canvas || !window.THREE) return;
+
+  const W = canvas.parentElement.offsetWidth || 400;
+  const H = W;
+
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setSize(W, H);
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 100);
+  camera.position.set(0, 5, 8);
+  camera.lookAt(0, 0, 0);
+
+  // Terrain plane
+  const terrainGeo = new THREE.PlaneGeometry(8, 8, 48, 48);
+  const positions2 = terrainGeo.attributes.position;
+  for (let i = 0; i < positions2.count; i++) {
+    const x = positions2.getX(i);
+    const y = positions2.getY(i);
+    const z = Math.sin(x * 0.8) * Math.cos(y * 0.8) * 0.6
+             + Math.sin(x * 1.5 + 0.3) * 0.3
+             + Math.cos(y * 1.2 + 0.5) * 0.25
+             + (Math.random() - 0.5) * 0.12;
+    positions2.setZ(i, z);
+  }
+  terrainGeo.computeVertexNormals();
+
+  const terrainMat = new THREE.MeshBasicMaterial({
+    color: 0x059669, wireframe: true, transparent: true, opacity: 0.55
+  });
+  const terrain = new THREE.Mesh(terrainGeo, terrainMat);
+  terrain.rotation.x = -Math.PI / 2;
+  scene.add(terrain);
+
+  // River — blue strip
+  const riverGeo = new THREE.PlaneGeometry(0.6, 8, 1, 1);
+  const riverMat = new THREE.MeshBasicMaterial({ color: 0x0EA5E9, transparent: true, opacity: 0.45 });
+  const river = new THREE.Mesh(riverGeo, riverMat);
+  river.rotation.x = -Math.PI / 2;
+  river.position.y = 0.01;
+  river.position.x = 2.5;
+  scene.add(river);
+
+  // Landmark pin
+  const pinGeo = new THREE.ConeGeometry(0.15, 0.6, 6);
+  const pinMat = new THREE.MeshBasicMaterial({ color: 0xEF4444 });
+  const pin = new THREE.Mesh(pinGeo, pinMat);
+  pin.position.set(0.2, 1.0, 0.3);
+  scene.add(pin);
+
+  let isDragging = false, prevMouseX = 0, prevMouseY = 0;
+  let rotY = 0, rotX = 0.3;
+
+  canvas.addEventListener('mousedown', (e) => { isDragging = true; prevMouseX = e.clientX; prevMouseY = e.clientY; });
+  window.addEventListener('mouseup', () => { isDragging = false; });
+  window.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    rotY += (e.clientX - prevMouseX) * 0.01;
+    rotX += (e.clientY - prevMouseY) * 0.005;
+    rotX = Math.max(-0.5, Math.min(0.8, rotX));
+    prevMouseX = e.clientX;
+    prevMouseY = e.clientY;
+  });
+
+  let tGeo = 0;
+  function animateGeo() {
+    requestAnimationFrame(animateGeo);
+    tGeo += 0.005;
+
+    if (!isDragging) {
+      rotY += 0.004;
+    }
+    terrain.rotation.z = rotY;
+    camera.position.y = 5 + Math.sin(tGeo) * 0.5;
+    camera.position.x = Math.sin(tGeo * 0.3) * 1;
+    camera.lookAt(0, 0, 0);
+
+    pin.position.y = 0.95 + Math.sin(tGeo * 2) * 0.08;
+    pin.rotation.y += 0.02;
+
+    renderer.render(scene, camera);
+  }
+  animateGeo();
+})();
+
+// =========================================================
+// THREE.JS — TIMELINE SCROLL WHEEL CANVAS
+// =========================================================
+(function initTimelineThree() {
+  const canvas = document.getElementById('three-timeline');
+  if (!canvas || !window.THREE) return;
+
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setSize(280, 280);
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 100);
+  camera.position.set(0, 0, 5);
+
+  // Torus (scroll wheel)
+  const torusGeo = new THREE.TorusGeometry(1.8, 0.04, 8, 64);
+  const torusMat = new THREE.MeshBasicMaterial({ color: 0x10B981, transparent: true, opacity: 0.4 });
+  const torus = new THREE.Mesh(torusGeo, torusMat);
+  scene.add(torus);
+
+  const torus2 = new THREE.Mesh(
+    new THREE.TorusGeometry(1.2, 0.03, 8, 64),
+    new THREE.MeshBasicMaterial({ color: 0x059669, transparent: true, opacity: 0.3 })
+  );
+  scene.add(torus2);
+
+  // Center star
+  const starGeo = new THREE.IcosahedronGeometry(0.4, 1);
+  const starMat = new THREE.MeshBasicMaterial({ color: 0x34D399, wireframe: true, transparent: true, opacity: 0.6 });
+  const star = new THREE.Mesh(starGeo, starMat);
+  scene.add(star);
+
+  // Orbiting dots
+  const dotCount = 6;
+  const dots = [];
+  for (let i = 0; i < dotCount; i++) {
+    const dotGeo = new THREE.SphereGeometry(0.07, 8, 8);
+    const dotMat = new THREE.MeshBasicMaterial({ color: 0x10B981 });
+    const dot = new THREE.Mesh(dotGeo, dotMat);
+    scene.add(dot);
+    dots.push({ mesh: dot, angle: (i / dotCount) * Math.PI * 2, radius: 1.8 });
+  }
+
+  let tTL = 0;
+  function animateTL() {
+    requestAnimationFrame(animateTL);
+    tTL += 0.012;
+
+    torus.rotation.x = Math.sin(tTL * 0.5) * 0.4;
+    torus.rotation.y += 0.008;
+    torus2.rotation.x = -Math.sin(tTL * 0.5) * 0.4;
+    torus2.rotation.y -= 0.012;
+    star.rotation.y += 0.02;
+    star.rotation.x += 0.01;
+
+    // Scroll progress sync
+    const prog = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+    dots.forEach((d, i) => {
+      d.angle += 0.01;
+      const r = d.radius * (0.9 + prog * 0.2);
+      d.mesh.position.x = Math.cos(d.angle) * r;
+      d.mesh.position.y = Math.sin(d.angle) * r * 0.4;
+      d.mesh.position.z = Math.sin(d.angle + tTL) * 0.5;
+    });
+
+    renderer.render(scene, camera);
+  }
+  animateTL();
+})();
+
+// =========================================================
+// GALLERY RENDER
+// =========================================================
+function renderGallery() {
+  const grid = document.getElementById('gallery-grid');
+  if (!grid) return;
+  grid.innerHTML = '';
+
+  galleryImages.forEach((img, index) => {
+    const item = document.createElement('div');
+    item.className = 'gallery-item';
+    item.setAttribute('role', 'listitem');
+    item.setAttribute('tabindex', '0');
+    item.setAttribute('aria-label', `Gallery image ${index + 1}: ${img.en}`);
+
+    if (img.src) {
+      item.innerHTML = `
+        <img class="gallery-img" src="${img.src}" 
+             alt="${img.en}"
+             onerror="this.parentElement.innerHTML=\`<div class='gallery-placeholder'><div class='gallery-placeholder-icon'>${img.icon}</div><div>${img.en}</div><div style='font-family:var(--ff-ur);font-size:.75rem;color:var(--text3);margin-top:.25rem;direction:rtl;'>${img.ur}</div></div>\`"
+             loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-overlay-icon">${img.icon}</div>
+          <div class="gallery-overlay-title">${img.en}</div>
+          <div class="gallery-overlay-sub" style="font-family:var(--ff-ur);direction:rtl;">${img.ur}</div>
+        </div>`;
+    } else {
+      item.innerHTML = `
+        <div class="gallery-placeholder">
+          <div class="gallery-placeholder-icon">${img.icon}</div>
+          <div style="font-weight:600;">${img.en}</div>
+          <div style="font-family:var(--ff-ur);font-size:.75rem;direction:rtl;margin-top:.25rem;">${img.ur}</div>
+        </div>`;
+    }
+
+    item.addEventListener('click', () => openLightbox(index));
+    item.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') openLightbox(index); });
+    grid.appendChild(item);
+  });
+}
+
+// =========================================================
+// LIGHTBOX
+// =========================================================
+function openLightbox(index) {
+  currentLbIndex = index;
+  updateLightbox();
+  const lb = document.getElementById('lightbox');
+  lb.classList.add('open');
+  lb.focus();
+  document.body.style.overflow = 'hidden';
+}
+
+function updateLightbox() {
+  const img = galleryImages[currentLbIndex];
+  const lbImg = document.getElementById('lb-img');
+  if (img.src) {
+    lbImg.src = img.src;
+    lbImg.alt = img.en;
+    lbImg.style.display = 'block';
+  } else {
+    lbImg.style.display = 'none';
+  }
+  document.getElementById('lb-cap-en').textContent = img.en;
+  document.getElementById('lb-cap-ur').textContent = img.ur;
+  document.getElementById('lb-counter').textContent = `${currentLbIndex + 1} / ${galleryImages.length}`;
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function lbNav(dir) {
+  currentLbIndex = (currentLbIndex + dir + galleryImages.length) % galleryImages.length;
+  updateLightbox();
+  // Re-animate
+  const wrap = document.querySelector('.lb-img-wrap');
+  wrap.style.animation = 'none';
+  wrap.offsetHeight; // reflow
+  wrap.style.animation = '';
+}
+
+document.getElementById('lb-close').addEventListener('click', closeLightbox);
+document.getElementById('lb-prev').addEventListener('click', () => lbNav(-1));
+document.getElementById('lb-next').addEventListener('click', () => lbNav(1));
+document.getElementById('lightbox').addEventListener('click', (e) => {
+  if (e.target === document.getElementById('lightbox')) closeLightbox();
+});
+document.addEventListener('keydown', (e) => {
+  const lb = document.getElementById('lightbox');
+  if (!lb.classList.contains('open')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') lbNav(-1);
+  if (e.key === 'ArrowRight') lbNav(1);
+});
+
+// =========================================================
+// LANGUAGE TOGGLE
+// =========================================================
+document.getElementById('lang-toggle').addEventListener('click', () => {
+  isEn = !isEn;
+  const html = document.documentElement;
+  if (isEn) {
+    html.setAttribute('data-lang', 'en');
+    html.setAttribute('dir', 'ltr');
+    html.setAttribute('lang', 'en');
+  } else {
+    html.setAttribute('data-lang', 'ur');
+    html.setAttribute('dir', 'rtl');
+    html.setAttribute('lang', 'ur');
+  }
+});
+
+// =========================================================
+// THEME TOGGLE
+// =========================================================
+const themeToggle = document.getElementById('theme-toggle');
+themeToggle.addEventListener('click', () => {
+  isDay = !isDay;
+  document.documentElement.setAttribute('data-theme', isDay ? 'day' : 'night');
+  themeToggle.textContent = isDay ? '🌙' : '☀️';
+});
+
+// =========================================================
+// HAMBURGER / MOBILE NAV
+// =========================================================
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobile-nav');
+hamburger.addEventListener('click', () => {
+  const isOpen = mobileNav.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', isOpen);
+});
+mobileNav.querySelectorAll('.nav-link').forEach(l => {
+  l.addEventListener('click', () => {
+    mobileNav.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', false);
+  });
+});
+
+// =========================================================
+// SCROLL PROGRESS BAR
+// =========================================================
+window.addEventListener('scroll', () => {
+  const prog = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+  const bar = document.getElementById('scroll-bar');
+  if (bar) bar.style.width = (prog * 100) + '%';
+
+  // Back to top
+  const btn = document.getElementById('back-top');
+  if (btn) {
+    if (window.scrollY > 400) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+  }
+});
+
+// =========================================================
+// SCROLL REVEAL
+// =========================================================
+const revealEls = document.querySelectorAll('.reveal, .timeline-item');
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.12 });
+revealEls.forEach(el => revealObs.observe(el));
+
+// Lang bars animate on scroll
+const langBarObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.lang-bar-fill').forEach(fill => {
+        const w = fill.getAttribute('data-width');
+        setTimeout(() => { fill.style.width = w + '%'; }, 200);
+      });
+      langBarObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.3 });
+const langBarsEl = document.getElementById('lang-bars');
+if (langBarsEl) langBarObs.observe(langBarsEl);
+
+// =========================================================
+// SEARCH
+// =========================================================
+const searchInput = document.getElementById('search-input');
+const searchResultsEl = document.getElementById('search-results');
+
+function doSearch() {
+  const q = searchInput.value.trim().toLowerCase();
+  if (!q) { searchResultsEl.hidden = true; return; }
+
+  const filtered = searchData.filter(d =>
+    d.title.toLowerCase().includes(q) ||
+    d.titleUr.includes(q) ||
+    d.desc.toLowerCase().includes(q)
+  ).slice(0, 6);
+
+  if (!filtered.length) { searchResultsEl.hidden = true; return; }
+
+  searchResultsEl.innerHTML = filtered.map(r => `
+    <div class="search-result-item" onclick="goTo('${r.link}')">
+      <span>${r.icon}</span>
+      <div>
+        <div style="font-weight:600;">${r.title}</div>
+        <div style="font-size:.75rem; color:var(--text3);">${r.desc}</div>
+      </div>
+    </div>
+  `).join('');
+  searchResultsEl.hidden = false;
+}
+
+function goTo(link) {
+  searchResultsEl.hidden = true;
+  searchInput.value = '';
+  document.querySelector(link)?.scrollIntoView({ behavior: 'smooth' });
+}
+
+searchInput.addEventListener('input', doSearch);
+searchInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') doSearch();
+  if (e.key === 'Escape') searchResultsEl.hidden = true;
+});
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('#search-input') && !e.target.closest('#search-results')) {
+    searchResultsEl.hidden = true;
+  }
+});
+
+// =========================================================
+// WEATHER (mocked live — Karor Lal Esan 31°13'N 70°57'E)
+// =========================================================
+function updateWeather() {
+  const month = new Date().getMonth();
+  // Summer: June-Sep; Winter: Dec-Feb
+  const isSummer = month >= 5 && month <= 8;
+  const isWinter = month === 11 || month <= 1;
+  const temps = isSummer ? [40, 44, 46, 48, 42, 43] : isWinter ? [12, 15, 10, 18, 14] : [28, 32, 35, 30, 33];
+  const temp = temps[Math.floor(Math.random() * temps.length)];
+  const conditions = isSummer
+    ? ['Hot & Sunny ☀️', 'Blazing Heat 🔥', 'Clear Sky ☀️', 'Dust Haze 🌫️']
+    : isWinter
+    ? ['Cool & Clear 🌤️', 'Mild & Sunny 🌞', 'Cold Night 🌙', 'Foggy Morning 🌫️']
+    : ['Warm & Sunny 🌤️', 'Pleasant ☀️', 'Partly Cloudy ⛅'];
+
+  const cond = conditions[Math.floor(Math.random() * conditions.length)];
+
+  const heroTemp = document.getElementById('weather-temp');
+  const heroDesc = document.getElementById('weather-desc');
+  const footerTemp = document.getElementById('footer-temp');
+
+  if (heroTemp) heroTemp.textContent = temp + '°C';
+  if (heroDesc) heroDesc.querySelector('.en-inline').textContent = cond.replace(/[☀️🔥🌫️🌤️🌞🌙⛅]/g,'').trim();
+  if (footerTemp) footerTemp.textContent = temp + '°C ' + (isSummer ? '☀️' : isWinter ? '❄️' : '🌤️');
+}
+updateWeather();
+setInterval(updateWeather, 300000); // refresh every 5 min
+
+// =========================================================
+// FOOTER CLOCK
+// =========================================================
+function updateClock() {
+  const now = new Date();
+  const timeStr = now.toLocaleTimeString('en-PK', {
+    hour: '2-digit', minute: '2-digit', second: '2-digit',
+    timeZone: 'Asia/Karachi'
+  });
+  const el = document.getElementById('footer-clock');
+  if (el) el.textContent = '🕐 ' + timeStr + ' PKT';
+}
+updateClock();
+setInterval(updateClock, 1000);
+document.getElementById('copy-year').textContent = new Date().getFullYear();
+
+// =========================================================
+// NEWSLETTER SUBSCRIBE
+// =========================================================
+function subscribeNewsletter() {
+  const email = document.getElementById('newsletter-email');
+  const msg = document.getElementById('newsletter-msg');
+  if (!email || !email.value.includes('@')) {
+    msg.style.display = 'block';
+    msg.textContent = 'Please enter a valid email address.';
+    msg.style.color = '#EF4444';
+    return;
+  }
+  email.value = '';
+  msg.style.display = 'block';
+  msg.style.color = '#6EE7B7';
+  const isEnNow = document.documentElement.getAttribute('data-lang') !== 'ur';
+  msg.textContent = isEnNow ? '✅ Subscribed! Thank you.' : '✅ سبسکرائب ہو گئے! شکریہ۔';
+}
+
+// =========================================================
+// INIT
+// =========================================================
+renderGallery();
+
+// Smooth nav link clicks
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+
+</body>
+</html>
